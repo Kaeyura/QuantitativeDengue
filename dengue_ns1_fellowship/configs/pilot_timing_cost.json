@@ -1,0 +1,18 @@
+{
+ "stage_runtimes_s": {
+  "RFdiffusion_8_backbones": 1708,
+  "ProteinMPNN_16_seqs_GPU": 14,
+  "AF2multimer_16_complexes": 2884
+ },
+ "per_unit": {
+  "RFdiffusion_s_per_backbone": 213.5,
+  "ProteinMPNN_s_per_seq_GPU": 0.88,
+  "AF2multimer_s_per_complex": 180.2
+ },
+ "total_gpu_wall_s": 4606,
+ "total_gpu_hours": 1.279,
+ "assumed_A40_rate_usd_per_hr": 0.44,
+ "pilot_gpu_cost_usd": 0.563,
+ "mpnn_device": "GPU (torch 2.5.1+cu121, cuda:NVIDIA A40) \u2014 NO CPU fallback",
+ "note": "single failed MPNN submit (path bug) added ~30s, negligible; AF2 auto-harvest failed, files pulled manually"
+}

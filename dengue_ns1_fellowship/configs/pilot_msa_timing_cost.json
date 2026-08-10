@@ -1,0 +1,19 @@
+{
+ "msa_refold": {
+  "note": "Run crashed on pod restart after building 9/16 MSAs; resumed reusing those 9. Times below are the successful resume job.",
+  "msa_stage_resume_s": 1504,
+  "msa_stage_resume_min": 25.1,
+  "fold_stage_s": 3668,
+  "fold_stage_min": 61.1,
+  "fold_s_per_complex": 229.2,
+  "resume_total_s": 5172,
+  "resume_gpu_h": 1.437,
+  "resume_cost_usd": 0.632
+ },
+ "vs_single_seq": {
+  "ss_fold_s": 2884,
+  "ss_fold_s_per_complex": 180.2,
+  "msa_adds": "an MSA-search stage (~5 min/query on shared api.colabfold.com) with no analogous cost in single_sequence mode; fold stage is comparable (180 vs 229 s/complex)."
+ },
+ "assumed_A40_rate_usd_per_hr": 0.44
+}

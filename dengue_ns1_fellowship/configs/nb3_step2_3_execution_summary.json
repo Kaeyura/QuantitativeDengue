@@ -1,0 +1,58 @@
+{
+  "step": "2+3_merged_hotspot_steered_refinement",
+  "job_id": "ca8933f9-ed69-422c-80bb-84a4dedbab29",
+  "remote_target": "ssh:junkgpu (RunPod A40, NVIDIA driver 550.127.05)",
+  "design_strategy": {
+    "input": "Seed 5 scaffold (ipTM 0.752, on-epitope \u03b2-ladder binder, engages hotspot 269)",
+    "framework": "118 aa VHH nanobody from seed 5 Boltz-2 prediction",
+    "target": "NS1 full-length (346 aa), chain B in complex",
+    "hotspots": [
+      269,
+      272,
+      274
+    ],
+    "hotspot_rationale": "269 already engaged (3.9 \u00c5); 272 & 274 nearby (7.5\u20137.7 \u00c5), refinable via CDR design"
+  },
+  "rfdiffusion_config": {
+    "num_designs": 12,
+    "cdr_loops": "H1:7, H2:6, H3:5-13 (standard VHH CDR lengths)",
+    "hotspots_ns1": "B269, B272, B274",
+    "diffuser_timesteps": 50,
+    "deterministic": true
+  },
+  "pipeline": [
+    "1. RFdiffusion: 12 backbone designs with hotspot steering",
+    "2. ProteinMPNN: 4 sequences per design \u2192 48 total designs",
+    "3. Extract all 48 designs to PDB",
+    "4. Boltz-2 (MSA-backed) validation on top 8"
+  ],
+  "validation": {
+    "mode": "MSA-backed full-length Boltz-2",
+    "recycling_steps": 3,
+    "sample_size": 8,
+    "reason": "GPU cost optimization \u2014 validate top 8; filter before Step 4 scale-up"
+  },
+  "gate_criteria": {
+    "ipTM": "> 0.68",
+    "pLDDT": "> 0.80",
+    "interface_pae": "< 5.0 \u00c5 at hotspot contacts",
+    "hotspot_engagement": "\u2265 2 of {269, 272, 274}"
+  },
+  "outputs": {
+    "designs_pdb": "48 PDB files (RFdiffusion + ProteinMPNN)",
+    "boltz_results": "8 Boltz-2 validation runs with confidence JSON + PAE",
+    "metrics_json": "step2_3_metrics.json with ipTM, pLDDT for top 8"
+  },
+  "expected_results": {
+    "walltime_hours": "1.5\u20132.0",
+    "gpu_hours": "1.5\u20132.0",
+    "estimated_cost_usd": "0.50\u20131.20"
+  },
+  "next_steps": [
+    "1. Wait for job completion",
+    "2. Download metrics_json and top designs",
+    "3. Evaluate against fixed thresholds (no relaxation)",
+    "4. If max ipTM > 0.68 + \u22652 hotspots: Proceed to Step 4 (scale-up)",
+    "5. If max ipTM < 0.65: Stop, binding mode not refinable"
+  ]
+}

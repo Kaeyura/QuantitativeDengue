@@ -1,0 +1,3 @@
+design,ipTM_mini_target,ipTM_fulllen_noMSA,ipTM_fulllen_MSA,plddt_MSA,conf_MSA,epitope_contacts_noMSA,hotspots_noMSA,epitope_contacts_MSA,hotspots_MSA,shared_contacts_noMSA_vs_MSA,binding_mode,verdict
+nb_2_dldesign_0,0.839,0.835,0.662,0.868,0.826,10,"269,272,296",0,none,0,SHIFTED off epitope,REJECT: binding mode not reproducible
+nb_3_dldesign_0,0.593,0.702,0.553,0.874,0.809,12,"269,272",7,none,10,STABLE (epitope region),lead: stable epitope-region binder

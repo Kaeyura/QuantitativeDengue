@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "created_at": "2026-07-19T19:26:41.184Z",
+  "task_summary": "Re-validate 24 existing NS1/flu nanobody designs with an open AF3-class model (Boltz)",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Deploy AF3-class validator",
+      "delegations": [
+        {
+          "name": "Install Boltz",
+          "steps": [
+            {
+              "title": "Confirm Boltz install + weight reachability",
+              "description": "Verify boltz is pip-installable and its weights (and CCD/msa deps) download on the pod. Prefer Boltz-2 (most AF3-competitive) with Boltz-1 as fallback; single-sequence mode (no MSA server) to avoid external dependencies."
+            },
+            {
+              "title": "Create isolated uv venv on /workspace",
+              "description": "Install Boltz into a self-contained uv venv under /workspace, fully isolated from the fragile RFdiffusion/ProteinMPNN/ColabFold/dlbinder conda envs. Write a boot snippet. Run a 1-prediction smoke test end-to-end to confirm the validator produces ipTM/PAE output."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Re-score existing designs",
+      "delegations": [
+        {
+          "name": "Predict complexes",
+          "steps": [
+            {
+              "title": "Extract binder+target sequences for all 24 designs",
+              "description": "From the RF2 output PDBs on the pod (betaladder 8, connectorC 8, flu HA control 8), extract binder chain (H) and target chain (T) sequences. Build Boltz input files for each binder–target complex."
+            },
+            {
+              "title": "Run Boltz on all 24 complexes",
+              "description": "Predict all 24 binder–NS1 and binder–HA complexes on the A40. Record per-design ipTM, pTM, and interface PAE, plus wall-clock time per prediction and total GPU-hours."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    },
+    {
+      "name": "Compare and report",
+      "delegations": [
+        {
+          "name": "Head-to-head",
+          "steps": [
+            {
+              "title": "Build head-to-head comparison table + figure",
+              "description": "For every design, place the new AF3-class interface-confidence score (ipTM, interface PAE) next to its old RF2_ab interaction_pae baseline. Plot score distributions grouped by target (betaladder/connectorC/flu control)."
+            },
+            {
+              "title": "Verdict: control integrity + NS1 conclusion",
+              "description": "Answer: (1) does the flu HA control still pass under Boltz (if it breaks, comparison is void — flag it); (2) do any failed NS1 designs now score meaningfully better — report the full distribution, not just pass counts, showing whether they are still floor-pinned or trending toward passing; (3) honest read on whether switching validators changes the NS1 negative or the negative holds under both methods."
+            },
+            {
+              "title": "Cost report",
+              "description": "Report total runtime and GPU-hours for the 24-design re-validation and the implied per-design cost of AF3-class validation going forward."
+            }
+          ]
+        }
+      ],
+      "id": "phase-2"
+    }
+  ],
+  "desired_outputs": [
+    "Deployability decision note: which AF3-class validator was chosen and why (no new designs)",
+    "Head-to-head CSV: each design's old interface-PAE baseline vs new AF3-class ipTM/interface-PAE",
+    "Comparison figure showing score distributions by target (betaladder / connectorC / flu control)",
+    "Written verdict: does the flu control still pass, do NS1 designs improve, does the negative hold",
+    "Runtime + GPU-hours cost report for AF3-class re-validation"
+  ],
+  "feasibility": {
+    "rationale": "The pod now reaches HuggingFace/GitHub/PyPI (verified this session — the prior 'unreachable' note is stale), and a real Boltz weight file returns HTTP 200, so an open AF3-class model is genuinely deployable here without gated AF3 weights or the web server. All 24 nanobody complexes are present on the pod with binder+target chains, so sequences are recoverable. The one caveat: this is a re-validation of 24 existing designs only — no new generation — and the old baseline for these nanobodies is RF2_ab interaction_pae (not af2_initial_guess, which only scored the separate 50-minibinder set that lacks a positive control).",
+    "confidence": "high"
+  }
+}

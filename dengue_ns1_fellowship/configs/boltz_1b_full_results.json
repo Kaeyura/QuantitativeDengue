@@ -1,0 +1,208 @@
+{
+  "gate_criteria": {
+    "plddt_min": 0.8,
+    "iptm_min": 0.7,
+    "ipde_max": 5.0,
+    "epitope_contacts_min": 3,
+    "note": "The applied filter checks n_epitope_contacts>=3 (>=3 heavy-atom contacts within the native beta-ladder range 261-305 at 1.5-4.5A). It does NOT separately threshold on number of distinct hotspots engaged -- 'min_hotspots:1' in a prior version of this file was a label error: hotspots_engaged is reported per-design for diagnostic purposes but was never used as a pass/fail criterion."
+  },
+  "finding": "Phase 1b re-ran partial diffusion seeded specifically from the one on-epitope Phase-1 design (seed5_pd_9_dldesign_0). Result: FOURTH independent replication of the ipTM/epitope-fidelity inversion. 2/16 designs clear ipTM>0.7 (up to 0.851, the highest seen this campaign) but both bind completely off-epitope. The on-epitope designs (28,30,16,5_dldesign_0) all have low ipTM (0.156-0.491). 0/16 pass the full locked gate.",
+  "results": [
+    {
+      "name": "onepi_pd_30_dldesign_1",
+      "iptm": 0.447,
+      "ptm": 0.814,
+      "complex_plddt": 0.875,
+      "complex_ipde": 9.77,
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 16,
+      "hotspots_engaged": [
+        272
+      ],
+      "on_epitope": true,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_5_dldesign_0",
+      "iptm": 0.197,
+      "ptm": 0.764,
+      "complex_plddt": 0.858,
+      "complex_ipde": 13.7,
+      "n_epitope_contacts": 7,
+      "n_total_contacts": 11,
+      "hotspots_engaged": [],
+      "on_epitope": true,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_28_dldesign_0",
+      "iptm": 0.475,
+      "ptm": 0.824,
+      "complex_plddt": 0.868,
+      "complex_ipde": 8.69,
+      "n_epitope_contacts": 4,
+      "n_total_contacts": 9,
+      "hotspots_engaged": [],
+      "on_epitope": true,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_16_dldesign_0",
+      "iptm": 0.204,
+      "ptm": 0.769,
+      "complex_plddt": 0.869,
+      "complex_ipde": 12.82,
+      "n_epitope_contacts": 4,
+      "n_total_contacts": 7,
+      "hotspots_engaged": [],
+      "on_epitope": true,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_20_dldesign_0",
+      "iptm": 0.156,
+      "ptm": 0.74,
+      "complex_plddt": 0.857,
+      "complex_ipde": 11.33,
+      "n_epitope_contacts": 1,
+      "n_total_contacts": 6,
+      "hotspots_engaged": [
+        272
+      ],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_5_dldesign_1",
+      "iptm": 0.851,
+      "ptm": 0.929,
+      "complex_plddt": 0.876,
+      "complex_ipde": 1.78,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 18,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_11_dldesign_0",
+      "iptm": 0.764,
+      "ptm": 0.905,
+      "complex_plddt": 0.881,
+      "complex_ipde": 3.5,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 17,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_15_dldesign_0",
+      "iptm": 0.686,
+      "ptm": 0.881,
+      "complex_plddt": 0.862,
+      "complex_ipde": 6.51,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 20,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_7_dldesign_1",
+      "iptm": 0.681,
+      "ptm": 0.875,
+      "complex_plddt": 0.882,
+      "complex_ipde": 4.0,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 17,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_12_dldesign_1",
+      "iptm": 0.665,
+      "ptm": 0.853,
+      "complex_plddt": 0.858,
+      "complex_ipde": 5.29,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 19,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_12_dldesign_0",
+      "iptm": 0.622,
+      "ptm": 0.859,
+      "complex_plddt": 0.887,
+      "complex_ipde": 5.72,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 13,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_20_dldesign_1",
+      "iptm": 0.602,
+      "ptm": 0.856,
+      "complex_plddt": 0.872,
+      "complex_ipde": 5.07,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 14,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_24_dldesign_1",
+      "iptm": 0.574,
+      "ptm": 0.843,
+      "complex_plddt": 0.852,
+      "complex_ipde": 7.26,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 23,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_9_dldesign_0",
+      "iptm": 0.491,
+      "ptm": 0.831,
+      "complex_plddt": 0.881,
+      "complex_ipde": 6.55,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 11,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_18_dldesign_0",
+      "iptm": 0.345,
+      "ptm": 0.787,
+      "complex_plddt": 0.871,
+      "complex_ipde": 8.32,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 12,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    },
+    {
+      "name": "onepi_pd_19_dldesign_0",
+      "iptm": 0.335,
+      "ptm": 0.776,
+      "complex_plddt": 0.879,
+      "complex_ipde": 9.03,
+      "n_epitope_contacts": 0,
+      "n_total_contacts": 16,
+      "hotspots_engaged": [],
+      "on_epitope": false,
+      "passes_locked_gate": false
+    }
+  ]
+}

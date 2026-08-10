@@ -1,0 +1,172 @@
+{
+  "onepi_pd_30_dldesign_1": {
+    "iptm": 0.4466705620288849,
+    "epitope_contacts": 8,
+    "contact_conservation": [
+      {
+        "residue": 272,
+        "DENV1": "K",
+        "DENV2": "K",
+        "DENV3": "K",
+        "DENV4": "K",
+        "conserved": true
+      },
+      {
+        "residue": 281,
+        "DENV1": "E",
+        "DENV2": "D",
+        "DENV3": "E",
+        "DENV4": "P",
+        "conserved": false
+      },
+      {
+        "residue": 299,
+        "DENV1": "R",
+        "DENV2": "R",
+        "DENV3": "R",
+        "DENV4": "R",
+        "conserved": true
+      },
+      {
+        "residue": 301,
+        "DENV1": "T",
+        "DENV2": "T",
+        "DENV3": "T",
+        "DENV4": "T",
+        "conserved": true
+      },
+      {
+        "residue": 302,
+        "DENV1": "T",
+        "DENV2": "T",
+        "DENV3": "T",
+        "DENV4": "T",
+        "conserved": true
+      },
+      {
+        "residue": 303,
+        "DENV1": "V",
+        "DENV2": "A",
+        "DENV3": "V",
+        "DENV4": "A",
+        "conserved": false
+      },
+      {
+        "residue": 304,
+        "DENV1": "T",
+        "DENV2": "S",
+        "DENV3": "S",
+        "DENV4": "S",
+        "conserved": false
+      },
+      {
+        "residue": 305,
+        "DENV1": "G",
+        "DENV2": "G",
+        "DENV3": "G",
+        "DENV4": "G",
+        "conserved": true
+      }
+    ]
+  },
+  "onepi_pd_5_dldesign_0": {
+    "iptm": 0.19735084474086761,
+    "epitope_contacts": 7,
+    "contact_conservation": [
+      {
+        "residue": 281,
+        "DENV1": "E",
+        "DENV2": "D",
+        "DENV3": "E",
+        "DENV4": "P",
+        "conserved": false
+      },
+      {
+        "residue": 299,
+        "DENV1": "R",
+        "DENV2": "R",
+        "DENV3": "R",
+        "DENV4": "R",
+        "conserved": true
+      },
+      {
+        "residue": 301,
+        "DENV1": "T",
+        "DENV2": "T",
+        "DENV3": "T",
+        "DENV4": "T",
+        "conserved": true
+      },
+      {
+        "residue": 302,
+        "DENV1": "T",
+        "DENV2": "T",
+        "DENV3": "T",
+        "DENV4": "T",
+        "conserved": true
+      },
+      {
+        "residue": 303,
+        "DENV1": "V",
+        "DENV2": "A",
+        "DENV3": "V",
+        "DENV4": "A",
+        "conserved": false
+      },
+      {
+        "residue": 304,
+        "DENV1": "T",
+        "DENV2": "S",
+        "DENV3": "S",
+        "DENV4": "S",
+        "conserved": false
+      },
+      {
+        "residue": 305,
+        "DENV1": "G",
+        "DENV2": "G",
+        "DENV3": "G",
+        "DENV4": "G",
+        "conserved": true
+      }
+    ]
+  },
+  "onepi_pd_28_dldesign_0": {
+    "iptm": 0.47462189197540283,
+    "epitope_contacts": 4,
+    "contact_conservation": [
+      {
+        "residue": 301,
+        "DENV1": "T",
+        "DENV2": "T",
+        "DENV3": "T",
+        "DENV4": "T",
+        "conserved": true
+      },
+      {
+        "residue": 303,
+        "DENV1": "V",
+        "DENV2": "A",
+        "DENV3": "V",
+        "DENV4": "A",
+        "conserved": false
+      },
+      {
+        "residue": 304,
+        "DENV1": "T",
+        "DENV2": "S",
+        "DENV3": "S",
+        "DENV4": "S",
+        "conserved": false
+      },
+      {
+        "residue": 305,
+        "DENV1": "G",
+        "DENV2": "G",
+        "DENV3": "G",
+        "DENV4": "G",
+        "conserved": true
+      }
+    ]
+  }
+}

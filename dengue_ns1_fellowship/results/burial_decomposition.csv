@@ -1,0 +1,8 @@
+pose,target_form,total_buried_A2,beta_ladder_261_305,tip_311_352,nterm_1_25,other,verdict
+seed5 (on-epitope),CROPPED 255-310,375,356,0,0,19,beta-ladder burial 356 A2
+noMSA (mixed),FULL 1-346,859,373,359,0,126,beta-ladder burial 373 A2; 42% of interface is FORBIDDEN tip
+seed3 (off-epitope),FULL 1-346,868,9,28,546,284,N-term decoy; beta-ladder essentially untouched
+
+KEY,,,,,,,beta-ladder burial is 356 vs 373 A2 cropped vs full-length =>
+,,,,,,,"the 354-vs-849 gap was NOT a crop artefact, but the 849 was"
+,,,,,,,only reachable by recruiting forbidden tip + off-target surface.

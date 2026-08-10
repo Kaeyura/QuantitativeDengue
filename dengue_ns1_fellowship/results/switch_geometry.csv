@@ -1,0 +1,14 @@
+measurement,value,implication
+nb_3 N-term -> paratope centroid,14.5 A,N-TERM is the proximal terminus (plan said C-term)
+nb_3 C-term -> paratope centroid,33.9 A,distal; needs >=11-res linker to reach paratope
+nb_3 N-term -> C-term,36.9 A,"termini on opposite poles, canonical VHH"
+seed5 footprint -> EP2 centroid (same protomer),50.2 A,hetero-sandwich within one protomer
+seed5 <-> EP2 closest CA-CA,32.4 A (269<->74),confirms plan's 32.4 A independently
+seed5(A) -> seed5(a) across dimer,78.8 A,homo-sandwich on beta-ladder RULED OUT
+EP2(A) -> EP2(a) across dimer,88.2 A,homo-sandwich on EP2 RULED OUT
+seed5(A) -> EP2(a) cross-protomer,70.4 A,too far for NanoBiT
+EP2 primary occluded by dimerisation,0 of 8,second epitope survives dimerisation
+EP2 fallback occluded by dimerisation,0 of 8,fallback also clear
+seed5 footprint occluded by dimerisation,0 of 7,nb_3 epitope survives dimerisation
+NS1 dimer interface (chain A),41 residues,"1-32,158,182-194,210,227-234"
+cAb-Lys3 decoy site in dimer interface,20 of 21 residues,decoy site DOES NOT EXIST on the dimer

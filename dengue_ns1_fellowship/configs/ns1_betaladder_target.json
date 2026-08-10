@@ -1,0 +1,12 @@
+{
+    "design_path": "/workspace/cs_scratch/bindcraft_ns1_pilot/",
+    "binder_name": "ns1_bl_bc",
+    "starting_pdb": "/workspace/cs_scratch/bindcraft_ns1_pilot/NS1_directionB_epitope_target.pdb",
+    "chains": "T",
+    "target_hotspot_residues": "269,272,274,294,296",
+    "lengths": [
+        60,
+        120
+    ],
+    "number_of_final_designs": 10
+}

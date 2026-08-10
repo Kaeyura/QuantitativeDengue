@@ -1,0 +1,43 @@
+design,campaign,n_hotspots_cropped,hotspots,epitope_contacts_cropped,overlap_2B7,clashing_NS1_residues_fulllength,atom_pairs_under_2A,sterically_feasible
+onepi_pd_18_dldesign_0,RF2_cropped_target,3,269;294;296,18,8,10,47,False
+onepi_pd_19_dldesign_0,RF2_cropped_target,3,269;294;296,15,5,15,92,False
+onepi_pd_20_dldesign_0,RF2_cropped_target,3,269;294;296,17,6,11,117,False
+onepi_pd_28_dldesign_0,RF2_cropped_target,3,269;294;296,22,6,12,123,False
+seed5_pd_18_dldesign_1,RF2_cropped_target,3,269;274;296,26,11,17,134,False
+seed5_pd_19_dldesign_0,RF2_cropped_target,3,269;272;296,17,8,16,137,False
+seed5_pd_12_dldesign_1,RF2_cropped_target,3,269;294;296,13,3,27,145,False
+onepi_pd_12_dldesign_0,RF2_cropped_target,3,269;294;296,22,7,12,150,False
+seed5_pd_19_dldesign_1,RF2_cropped_target,4,269;272;294;296,23,7,20,153,False
+seed5_pd_16_dldesign_0,RF2_cropped_target,3,269;294;296,20,10,18,156,False
+seed5_pd_5_dldesign_0,RF2_cropped_target,2,269;296,14,6,23,165,False
+onepi_pd_16_dldesign_0,RF2_cropped_target,5,269;272;274;294;296,26,9,22,180,False
+seed5_pd_10_dldesign_0,RF2_cropped_target,2,294;296,26,5,22,188,False
+seed5_pd_23_dldesign_1,RF2_cropped_target,2,269;296,15,6,27,203,False
+onepi_pd_12_dldesign_1,RF2_cropped_target,2,294;296,25,8,17,207,False
+onepi_pd_5_dldesign_0,RF2_cropped_target,4,269;272;294;296,27,9,30,209,False
+onepi_pd_7_dldesign_1,RF2_cropped_target,4,269;272;294;296,29,11,19,212,False
+onepi_pd_20_dldesign_1,RF2_cropped_target,5,269;272;274;294;296,33,11,23,232,False
+seed5_pd_2_dldesign_0,RF2_cropped_target,2,269;296,16,8,25,234,False
+seed5_pd_11_dldesign_0,RF2_cropped_target,3,269;272;296,31,11,21,239,False
+seed5_pd_2_dldesign_1,RF2_cropped_target,2,269;296,16,8,28,244,False
+onepi_pd_30_dldesign_1,RF2_cropped_target,4,269;274;294;296,34,11,30,256,False
+seed5_pd_1_dldesign_0,RF2_cropped_target,3,269;294;296,16,6,33,277,False
+onepi_pd_24_dldesign_1,RF2_cropped_target,4,269;272;294;296,18,8,33,281,False
+onepi_pd_11_dldesign_0,RF2_cropped_target,3,269;272;296,24,8,40,350,False
+onepi_pd_5_dldesign_1,RF2_cropped_target,3,269;274;296,34,11,30,355,False
+seed5_pd_3_dldesign_0,RF2_cropped_target,3,269;294;296,19,5,48,396,False
+seed5_pd_15_dldesign_1,RF2_cropped_target,4,269;272;274;296,23,8,50,406,False
+seed5_pd_20_dldesign_1,RF2_cropped_target,4,269;272;294;296,19,2,50,416,False
+onepi_pd_15_dldesign_0,RF2_cropped_target,5,269;272;274;294;296,38,11,44,462,False
+onepi_pd_9_dldesign_0,RF2_cropped_target,3,269;272;296,24,8,59,566,False
+seed5_pd_4_dldesign_1,RF2_cropped_target,4,269;272;294;296,19,2,79,874,False
+P2_21_d2,P2_fulllength,0,,8,1,n/a (built on full-length),n/a,yes
+P2_21_d1,P2_fulllength,0,,8,1,n/a (built on full-length),n/a,yes
+P2_0_d1,P2_fulllength,0,,7,1,n/a (built on full-length),n/a,yes
+P2_0_d2,P2_fulllength,0,,7,1,n/a (built on full-length),n/a,yes
+P2_5_d2,P2_fulllength,0,,5,1,n/a (built on full-length),n/a,yes
+P2_5_d1,P2_fulllength,0,,5,1,n/a (built on full-length),n/a,yes
+P2_97_d1,P2_fulllength,0,,4,2,n/a (built on full-length),n/a,yes
+P2_89_d1,P2_fulllength,0,,4,1,n/a (built on full-length),n/a,yes
+P2_89_d2,P2_fulllength,0,,4,1,n/a (built on full-length),n/a,yes
+P2_73_d1,P2_fulllength,0,,3,1,n/a (built on full-length),n/a,yes

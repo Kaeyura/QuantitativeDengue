@@ -1,0 +1,190 @@
+res,aa,rsa,curv,cons,region
+118,TRP,0.41,0.291,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+119,GLY,0.54,0.166,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+93,ILE,0.18,0.137,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+272,ARG,0.51,0.121,1.0,beta-ladder (Dir B primary epitope)
+162,VAL,0.2,0.12,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+278,ASP,0.37,0.12,0.5,beta-ladder (Dir B primary epitope)
+123,MET,0.46,0.109,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+301,THR,0.26,0.109,1.0,beta-ladder (Dir B primary epitope)
+14,LYS,0.25,0.107,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+62,ARG,0.25,0.094,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+205,ALA,0.21,0.088,0.25,other (beta-ladder/connector domain)
+256,TYR,0.18,0.08,1.0,other (beta-ladder/connector domain)
+227,LYS,0.29,0.077,1.0,other (beta-ladder/connector domain)
+324,ARG,0.42,0.072,0.25,"tip (host-mimicry, avoid)"
+12,GLU,0.24,0.063,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+318,LEU,0.38,0.061,0.75,"tip (host-mimicry, avoid)"
+1,ASP,0.24,0.058,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+73,PRO,0.47,0.057,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+15,CYS,0.46,0.053,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+69,LYS,0.35,0.052,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+70,GLN,0.47,0.05,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+315,SER,0.55,0.048,1.0,"tip (host-mimicry, avoid)"
+132,THR,0.34,0.044,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+307,LEU,0.4,0.039,0.75,other (beta-ladder/connector domain)
+154,GLU,0.22,0.039,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+281,GLU,0.71,0.037,0.5,beta-ladder (Dir B primary epitope)
+74,GLU,0.18,0.029,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+294,ARG,0.33,0.029,1.0,beta-ladder (Dir B primary epitope)
+214,LYS,0.45,0.028,0.75,other (beta-ladder/connector domain)
+95,GLY,0.19,0.027,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+145,ASN,0.19,0.026,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+157,ASP,0.43,0.023,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+317,THR,0.33,0.018,1.0,"tip (host-mimicry, avoid)"
+342,GLU,0.33,0.016,1.0,"tip (host-mimicry, avoid)"
+326,GLU,0.57,0.015,1.0,"tip (host-mimicry, avoid)"
+115,TRP,0.38,0.015,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+325,GLY,0.21,0.012,1.0,"tip (host-mimicry, avoid)"
+41,LYS,0.44,0.011,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+163,PHE,0.44,0.011,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+165,THR,0.22,0.01,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+92,ASP,0.53,0.009,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+213,GLU,0.27,0.008,0.75,other (beta-ladder/connector domain)
+232,TRP,0.18,0.008,1.0,other (beta-ladder/connector domain)
+253,GLN,0.17,0.007,1.0,other (beta-ladder/connector domain)
+161,GLY,0.21,0.005,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+35,GLN,0.16,0.004,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+302,THR,0.16,0.001,1.0,beta-ladder (Dir B primary epitope)
+91,GLY,0.23,0.0,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+282,GLY,0.48,0.0,1.0,beta-ladder (Dir B primary epitope)
+134,LEU,0.28,-0.004,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+305,GLY,0.51,-0.004,1.0,beta-ladder (Dir B primary epitope)
+158,TYR,0.33,-0.005,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+206,LEU,0.33,-0.005,0.75,other (beta-ladder/connector domain)
+96,ILE,0.24,-0.006,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+99,ALA,0.18,-0.009,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+207,ASN,0.57,-0.01,1.0,other (beta-ladder/connector domain)
+55,CYS,0.22,-0.011,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+309,THR,0.34,-0.011,0.5,other (beta-ladder/connector domain)
+259,GLY,0.36,-0.012,1.0,other (beta-ladder/connector domain)
+222,SER,0.18,-0.013,0.75,other (beta-ladder/connector domain)
+319,PRO,0.36,-0.015,1.0,"tip (host-mimicry, avoid)"
+39,PRO,0.24,-0.016,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+170,LYS,0.35,-0.019,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+107,GLN,0.19,-0.02,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+274,GLU,0.36,-0.02,1.0,beta-ladder (Dir B primary epitope)
+84,VAL,0.22,-0.021,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+47,GLN,0.16,-0.022,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+180,ASP,0.22,-0.022,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+276,ASP,0.19,-0.022,1.0,beta-ladder (Dir B primary epitope)
+182,LYS,0.26,-0.023,0.75,other (beta-ladder/connector domain)
+173,GLU,0.56,-0.026,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+270,LEU,0.15,-0.028,1.0,beta-ladder (Dir B primary epitope)
+346,VAL,0.43,-0.028,1.0,"tip (host-mimicry, avoid)"
+10,ASN,0.16,-0.029,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+31,GLN,0.19,-0.029,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+24,ASN,0.16,-0.03,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+279,PHE,0.33,-0.03,0.25,beta-ladder (Dir B primary epitope)
+122,LYS,0.77,-0.031,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+190,ASP,0.21,-0.032,1.0,other (beta-ladder/connector domain)
+211,LYS,0.18,-0.033,0.75,other (beta-ladder/connector domain)
+90,THR,0.24,-0.034,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+38,SER,0.25,-0.036,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+66,LEU,0.43,-0.044,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+33,LYS,0.38,-0.045,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+89,MET,0.37,-0.047,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+110,GLU,0.48,-0.049,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+287,VAL,0.44,-0.049,0.5,beta-ladder (Dir B primary epitope)
+106,PRO,0.33,-0.052,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+191,ASN,0.28,-0.055,0.25,other (beta-ladder/connector domain)
+245,LYS,0.29,-0.055,1.0,other (beta-ladder/connector domain)
+338,LEU,0.38,-0.055,0.5,"tip (host-mimicry, avoid)"
+292,GLY,0.24,-0.056,0.75,beta-ladder (Dir B primary epitope)
+328,GLY,0.27,-0.058,1.0,"tip (host-mimicry, avoid)"
+103,SER,0.15,-0.059,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+80,THR,0.36,-0.059,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+160,PHE,0.33,-0.06,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+258,PRO,0.44,-0.06,0.75,other (beta-ladder/connector domain)
+126,THR,0.26,-0.063,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+37,GLU,0.39,-0.065,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+77,HIS,0.16,-0.065,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+310,GLU,0.38,-0.066,0.75,other (beta-ladder/connector domain)
+168,TRP,0.32,-0.068,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+288,THR,0.28,-0.07,0.5,beta-ladder (Dir B primary epitope)
+26,HIS,0.36,-0.073,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+234,ASN,0.2,-0.073,1.0,other (beta-ladder/connector domain)
+340,GLU,0.32,-0.077,1.0,"tip (host-mimicry, avoid)"
+113,TYR,0.36,-0.079,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+156,GLU,0.26,-0.081,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+189,LYS,0.22,-0.088,1.0,other (beta-ladder/connector domain)
+265,ALA,0.35,-0.088,0.5,beta-ladder (Dir B primary epitope)
+50,HIS,0.24,-0.09,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+327,ASP,0.34,-0.09,1.0,"tip (host-mimicry, avoid)"
+314,ARG,0.41,-0.093,1.0,"tip (host-mimicry, avoid)"
+94,LYS,0.64,-0.097,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+176,ASP,0.34,-0.102,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+181,SER,0.27,-0.104,0.75,other (beta-ladder/connector domain)
+264,THR,0.43,-0.111,0.75,beta-ladder (Dir B primary epitope)
+246,ASN,0.43,-0.112,0.5,other (beta-ladder/connector domain)
+192,ARG,0.24,-0.113,0.5,other (beta-ladder/connector domain)
+81,GLU,0.26,-0.114,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+101,LYS,0.61,-0.121,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+129,HIS,0.22,-0.121,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+120,LYS,0.7,-0.124,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+164,THR,0.25,-0.125,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+296,PRO,0.51,-0.125,1.0,beta-ladder (Dir B primary epitope)
+143,CYS,0.18,-0.126,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+121,ALA,0.35,-0.127,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+284,THR,0.5,-0.128,1.0,beta-ladder (Dir B primary epitope)
+286,VAL,0.49,-0.128,0.75,beta-ladder (Dir B primary epitope)
+8,TRP,0.47,-0.132,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+224,HIS,0.24,-0.133,0.25,other (beta-ladder/connector domain)
+98,GLN,0.34,-0.135,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+128,LEU,0.63,-0.137,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+303,ALA,0.69,-0.143,0.5,beta-ladder (Dir B primary epitope)
+82,ASN,0.22,-0.144,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+102,ARG,0.34,-0.145,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+105,ARG,0.38,-0.145,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+261,HIS,0.4,-0.147,0.5,beta-ladder (Dir B primary epitope)
+146,THR,0.44,-0.154,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+30,GLU,0.48,-0.155,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+238,GLU,0.41,-0.16,1.0,other (beta-ladder/connector domain)
+218,ILE,0.17,-0.16,1.0,other (beta-ladder/connector domain)
+138,PRO,0.6,-0.161,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+85,LYS,0.36,-0.163,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+28,TRP,0.33,-0.165,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+125,SER,0.74,-0.166,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+178,PHE,0.4,-0.166,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+9,LYS,0.57,-0.169,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+240,GLU,0.23,-0.172,0.5,other (beta-ladder/connector domain)
+175,GLN,0.39,-0.174,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+269,HIS,0.47,-0.174,1.0,beta-ladder (Dir B primary epitope)
+108,PRO,0.82,-0.175,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+144,PRO,0.36,-0.178,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+174,ARG,0.7,-0.179,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+29,THR,0.16,-0.179,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+140,THR,0.35,-0.185,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+209,THR,0.42,-0.186,0.75,other (beta-ladder/connector domain)
+177,VAL,0.45,-0.187,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+139,GLU,0.38,-0.189,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+117,ALA,0.29,-0.19,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+293,ASN,0.53,-0.192,0.5,beta-ladder (Dir B primary epitope)
+53,GLY,0.41,-0.197,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+344,ASN,0.48,-0.197,1.0,"tip (host-mimicry, avoid)"
+235,GLY,0.72,-0.211,1.0,other (beta-ladder/connector domain)
+208,ASP,0.77,-0.212,0.25,other (beta-ladder/connector domain)
+306,LYS,0.58,-0.221,1.0,other (beta-ladder/connector domain)
+147,ASN,0.23,-0.224,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+48,LYS,0.4,-0.225,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+124,LEU,0.73,-0.225,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+131,HIS,0.41,-0.23,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+239,SER,0.4,-0.232,1.0,other (beta-ladder/connector domain)
+304,SER,0.68,-0.233,0.75,beta-ladder (Dir B primary epitope)
+289,GLU,0.69,-0.249,1.0,beta-ladder (Dir B primary epitope)
+52,GLU,0.43,-0.25,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+112,LYS,0.73,-0.255,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+109,THR,0.56,-0.256,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+114,SER,0.28,-0.256,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+339,LYS,0.7,-0.259,0.5,"tip (host-mimicry, avoid)"
+237,LEU,0.57,-0.267,1.0,other (beta-ladder/connector domain)
+127,GLU,0.57,-0.274,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+51,GLU,0.51,-0.287,0.75,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+343,GLU,0.63,-0.292,1.0,"tip (host-mimicry, avoid)"
+116,LYS,0.63,-0.301,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+130,ASN,0.67,-0.305,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+141,ALA,0.68,-0.318,0.5,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+142,GLU,0.64,-0.325,1.0,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+341,LYS,0.54,-0.325,1.0,"tip (host-mimicry, avoid)"
+83,GLU,0.73,-0.33,0.25,"wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+290,ASP,0.73,-0.356,0.5,beta-ladder (Dir B primary epitope)

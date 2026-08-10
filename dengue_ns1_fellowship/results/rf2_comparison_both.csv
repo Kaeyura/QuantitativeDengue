@@ -1,0 +1,17 @@
+design,interaction_pae,pae,pred_lddt,target_aligned_cdr_rmsd,target
+nb_0_dldesign_0,17.77,9.57,0.88,9.24,NS1_betaladder
+nb_0_dldesign_1,17.54,9.43,0.88,7.02,NS1_betaladder
+nb_1_dldesign_0,18.16,9.72,0.9,10.58,NS1_betaladder
+nb_1_dldesign_1,17.76,9.49,0.9,19.36,NS1_betaladder
+nb_2_dldesign_0,17.24,9.2,0.9,8.23,NS1_betaladder
+nb_2_dldesign_1,17.69,9.43,0.9,23.88,NS1_betaladder
+nb_3_dldesign_0,17.85,9.56,0.9,14.76,NS1_betaladder
+nb_3_dldesign_1,17.79,9.62,0.88,9.86,NS1_betaladder
+nb_0_dldesign_0,19.57,8.53,0.91,16.46,FLU_HA_control
+nb_0_dldesign_1,16.78,7.38,0.91,13.46,FLU_HA_control
+nb_1_dldesign_0,15.75,7.06,0.91,2.28,FLU_HA_control
+nb_1_dldesign_1,3.65,2.05,0.92,1.11,FLU_HA_control
+nb_2_dldesign_0,17.44,7.62,0.92,17.37,FLU_HA_control
+nb_2_dldesign_1,17.19,7.52,0.92,18.11,FLU_HA_control
+nb_3_dldesign_0,18.51,8.25,0.9,10.89,FLU_HA_control
+nb_3_dldesign_1,19.09,8.49,0.91,6.72,FLU_HA_control

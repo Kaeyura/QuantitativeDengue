@@ -1,0 +1,10 @@
+metric,seed5_on_epitope,seed3_off_epitope_Nterm,seed4_off_epitope,noMSA_mixed_pose
+Boltz-2 ipTM,0.752,0.778,0.713,0.702
+complex pLDDT,0.893,0.910,0.860,0.874
+BSA per side (A^2),354,849,n/d,841
+primary NS1 site,beta-ladder 261-306,N-terminus 1-15,35-40/110-122/160-168,beta-ladder + tip
+hotspots engaged (<=4.5A),1 (269 @3.9A),0,0,"2 (269,272)"
+interface driven by,"framework (299,303-306)","CDR-H3 (10-13,28-29)",n/d,CDR + tip contacts
+tip region 311-352 contact,"yes (324-328,346)",minimal (324),no,"yes (326-328,344-346)"
+interface net charge (NS1 side),+1 (H269/R299/K306),-1 (D1/E12),n/d,mixed
+gate status,"FAIL (pAE 6.6A, 1/5 hotspots)",off-epitope,off-epitope,off-epitope tip risk

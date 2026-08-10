@@ -1,0 +1,17 @@
+rank,name,rf2_plddt,n_hotspot_contacts,hotspots_engaged,n_epitope_contacts,n_total_contacts,n_severe_clash_pairs_lt1A,overall_min_dist_A
+1,onepi_pd_16_dldesign_0,0.872,4,272;274;294;296,18,20,19,0.562
+2,onepi_pd_15_dldesign_0,0.878,3,274;294;296,20,21,33,0.247
+3,onepi_pd_5_dldesign_0,0.875,3,269;272;294,18,22,14,0.187
+4,onepi_pd_28_dldesign_0,0.866,3,269;294;296,18,21,2,0.889
+5,onepi_pd_7_dldesign_1,0.879,3,272;294;296,17,17,30,0.267
+6,onepi_pd_5_dldesign_1,0.87,3,269;274;296,16,18,32,0.312
+7,onepi_pd_18_dldesign_0,0.877,3,269;294;296,15,16,5,0.58
+8,onepi_pd_20_dldesign_1,0.848,3,272;294;296,15,17,28,0.196
+9,onepi_pd_19_dldesign_0,0.863,3,269;294;296,14,14,1,0.988
+10,onepi_pd_24_dldesign_1,0.875,3,269;272;294,12,13,3,0.136
+11,onepi_pd_20_dldesign_0,0.844,3,269;294;296,12,15,8,0.367
+12,onepi_pd_12_dldesign_1,0.869,2,294;296,19,22,6,0.418
+13,onepi_pd_12_dldesign_0,0.87,2,294;296,17,17,3,0.324
+14,onepi_pd_30_dldesign_1,0.859,2,274;294,17,17,25,0.284
+15,onepi_pd_9_dldesign_0,0.857,2,272;296,17,18,9,0.4
+16,onepi_pd_11_dldesign_0,0.883,2,272;296,14,15,6,0.699

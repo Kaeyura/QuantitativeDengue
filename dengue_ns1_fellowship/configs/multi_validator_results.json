@@ -1,0 +1,132 @@
+{
+  "run": "v3 multi-validator (job e4119870)",
+  "target_used": "NS1 directionB truncated, 146 aa (chain B renumbered 1-146)",
+  "protocol": {
+    "AF2": "ColabFold mmseqs2_uniref_env, --num-recycle 3, alphafold2_multimer_v3, complex (colon-joined)",
+    "Boltz": "Boltz-2, --use_msa_server, recycling_steps 3, diffusion_samples 1, --no_kernels"
+  },
+  "designs": [
+    {
+      "design": "BC_l73_mpnn1",
+      "af2_iptm": 0.16,
+      "af2_plddt": 0.586,
+      "af2_ipae_mean": 22.3,
+      "af2_ipae_min": 10.8,
+      "boltz_iptm": 0.484,
+      "boltz_plddt": 0.737,
+      "boltz_ipde": 6.04,
+      "hotspots_engaged": 2,
+      "hotspots_list": [
+        272,
+        274
+      ],
+      "hotspot_dists": {
+        "269": 15.6,
+        "272": 4.7,
+        "274": 6.0,
+        "294": 24.8,
+        "296": 20.5
+      }
+    },
+    {
+      "design": "BC_l73_mpnn2",
+      "af2_iptm": 0.2,
+      "af2_plddt": 0.554,
+      "af2_ipae_mean": 21.9,
+      "af2_ipae_min": 9.4,
+      "boltz_iptm": 0.497,
+      "boltz_plddt": 0.731,
+      "boltz_ipde": 7.18,
+      "hotspots_engaged": 2,
+      "hotspots_list": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 5.5,
+        "272": 15.3,
+        "274": 17.7,
+        "294": 9.0,
+        "296": 6.4
+      }
+    },
+    {
+      "design": "BC_l107_mpnn1",
+      "af2_iptm": 0.14,
+      "af2_plddt": 0.57,
+      "af2_ipae_mean": 24.0,
+      "af2_ipae_min": 13.2,
+      "boltz_iptm": 0.481,
+      "boltz_plddt": 0.7,
+      "boltz_ipde": 6.19,
+      "hotspots_engaged": 2,
+      "hotspots_list": [
+        272,
+        274
+      ],
+      "hotspot_dists": {
+        "269": 8.8,
+        "272": 5.4,
+        "274": 5.0,
+        "294": 19.4,
+        "296": 17.0
+      }
+    },
+    {
+      "design": "nb3",
+      "af2_iptm": 0.18,
+      "af2_plddt": 0.701,
+      "af2_ipae_mean": 22.5,
+      "af2_ipae_min": 8.6,
+      "boltz_iptm": 0.454,
+      "boltz_plddt": 0.803,
+      "boltz_ipde": 6.65,
+      "hotspots_engaged": 0,
+      "hotspots_list": [],
+      "hotspot_dists": {
+        "269": 12.6,
+        "272": 9.7,
+        "274": 10.9,
+        "294": 17.7,
+        "296": 15.5
+      }
+    },
+    {
+      "design": "Control_PD1",
+      "af2_iptm": 0.16,
+      "af2_plddt": 0.67,
+      "af2_ipae_mean": 23.0,
+      "af2_ipae_min": 10.7,
+      "boltz_iptm": 0.226,
+      "boltz_plddt": 0.827,
+      "boltz_ipde": 8.52,
+      "hotspots_engaged": 1,
+      "hotspots_list": [
+        274
+      ],
+      "hotspot_dists": {
+        "269": 15.3,
+        "272": 10.7,
+        "274": 5.6,
+        "294": 17.4,
+        "296": 16.8
+      }
+    }
+  ],
+  "hotspot_cutoff_A": 8.0,
+  "hotspot_mapping_orig_to_chainB": {
+    "269": 69,
+    "272": 72,
+    "274": 74,
+    "294": 94,
+    "296": 96
+  },
+  "CONFOUND_1_nb3_target_mismatch": {
+    "issue": "nb_3's project baseline ipTM 0.553 was scored against FULL-LENGTH NS1 (346 aa); this run used truncated 146 aa.",
+    "consequence": "nb_3's 0.18 here is NOT comparable to the historical 0.553. Within THIS run, nb_3=0.18 IS the fair comparator (identical target+protocol for all 5)."
+  },
+  "CONFOUND_2_invalid_positive_control": {
+    "issue": "Control_PD1 is a PD-1-mimic antibody sequence docked against NS1 (non-cognate pair). BindCraft was NOT run for it; it is not a binder of its cognate target scored here.",
+    "consequence": "This does NOT distinguish 'NS1 epitope is hard' from 'setup is broken'. A proper control requires running BindCraft on a cognate easy target (e.g. the BindCraft PDL1 example) and scoring binder-vs-its-own-target."
+  }
+}

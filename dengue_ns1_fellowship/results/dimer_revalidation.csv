@@ -1,0 +1,11 @@
+target_form,seed,iptm,interface_pAE_A,complex_plddt,beta_ladder_contacts,binding_site_MEASURED,cross_protomer,contacts_chainB,contacts_chainC
+MONOMER (control),1,0.6426,7.03,0.8777,7,beta-ladder (ON-EPITOPE),n/a,,
+MONOMER (control),2,0.5153,9.15,0.8784,6,beta-ladder (ON-EPITOPE),n/a,,
+MONOMER (control),3,0.7778,3.43,0.9096,0,N-terminus decoy,n/a,,
+MONOMER (control),4,0.7129,5.56,0.86,0,wing/connector (off-epitope),n/a,,
+MONOMER (control),5,0.7522,5.29,0.8928,6,beta-ladder (ON-EPITOPE),n/a,,
+DIMER,1,0.739,5.63,0.8819,0,wing/connector (off-epitope),YES,35 36 37 38 39 40 74 110 113 115 118 122 160 162 163 166 168,11
+DIMER,2,0.7313,5.58,0.892,0,wing/connector (off-epitope),no,36 37 38 39 74 81 113 114 115 116 118 122 123 124 168,
+DIMER,3,0.7229,5.52,0.8918,0,N-terminus decoy,YES,8 11 12 13 27 28 163,2 3 4 15 16 17 160 161 162 164
+DIMER,4,0.7238,5.69,0.8881,0,N-terminus decoy,YES,2 3 4 5 6 8 12 13 15 16 17,2 3 4 6 8 13 15 26 28 31 160 163
+DIMER,5,0.769,4.64,0.8936,9,beta-ladder (ON-EPITOPE),no,92 96 138 269 296 297 298 299 301 303 304 305 326 327 330 343 344 345 346,

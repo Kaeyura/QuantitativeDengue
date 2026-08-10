@@ -1,0 +1,6 @@
+seed,predicted_B_C_interface_residues,overlap_with_crystal_dimer_interface,pct_overlap,protomer_C_mean_deviation_A,verdict
+1,51,41,80,2.9,correct crystallographic dimer
+2,56,41,73,3.1,correct crystallographic dimer
+3,55,41,75,3.1,correct crystallographic dimer
+4,53,41,77,2.7,correct crystallographic dimer
+5,49,41,84,2.5,correct crystallographic dimer

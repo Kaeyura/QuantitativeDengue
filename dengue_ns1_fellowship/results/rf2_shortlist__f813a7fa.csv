@@ -1,0 +1,13 @@
+design_id,seq_length,plddt,pae,n_hotspot_contacts
+rfd_design_042,118,0.897,3.27,6
+rfd_design_025,118,0.884,5.67,3
+rfd_design_017,118,0.883,5.9,1
+rfd_design_036,118,0.883,4.32,3
+rfd_design_029,118,0.883,3.24,5
+rfd_design_018,118,0.872,2.8,2
+rfd_design_033,118,0.869,2.43,2
+rfd_design_001,118,0.868,3.92,2
+rfd_design_022,118,0.868,1.6,6
+rfd_design_009,118,0.862,5.96,5
+rfd_design_027,118,0.857,4.62,1
+rfd_design_024,118,0.847,2.22,4

@@ -1,0 +1,17 @@
+quantity,value,source
+partner antibody,"3G2 (also 4B8, near-identical epitope)",PDB 8JKF / 8JKH
+partner structure type,"cryoEM, secreted NS1 (sNS1) hexamer",8JKF
+3G2 epitope,99-102;145-147;174-178;224;227;238;245,computed 4.5 A
+4B8 epitope,99-102;146;174-178;224;227;245,computed 4.5 A
+overlap with nb_3 seed-5 footprint,NONE,computed
+overlap with beta-ladder 261-305,NONE,computed
+overlap with forbidden tip 311-352,NONE,computed
+nb_3 <-> 3G2 centroid separation,34.5 A,9W22 chain A
+nb_3 <-> 3G2 closest CA-CA,14.6 A (269<->99),9W22 chain A
+steric min heavy-atom distance,18.3 A,8JKF Fab superposed (NS1 RMSD 2.29 A) + docked nb_3
+hard clashes (<2.5 A),0,computed
+contacts (<4.0 A),0,computed
+dimer-interface overlap,1 of 16 (res 227 only),9W22 dimer
+best reporter fusion pairing,"nb_3 N-term <-> 3G2 light-chain N-term, 54.9 A",computed
+linker requirement for that pairing,~10+10 residues (GGGGS)2 each arm,3.3 A/res extended
+verdict,"VALIDATED SANDWICH PAIR - non-overlapping, sterically compatible",both arms crystallographic

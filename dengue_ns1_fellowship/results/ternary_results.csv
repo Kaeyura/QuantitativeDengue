@@ -1,0 +1,11 @@
+run,construct,role,seed,iptm,interface_pae,plddt,nb3_epitope_contacts,nb3_contacts,fab_betaladder_hits,fab_own_epitope_overlap_of_16,verdict
+ctrl_3g2_s1,ctrl_3g2,arm control (3G2 + NS1),1,0.4834,6.57,0.9063,n/a (nb_3 not in construct),n/a,6,0,ARM CONTROL FAIL: 3G2 recovers 0/16 of its own cryoEM epitope; lands on beta-ladder
+ctrl_3g2_s2,ctrl_3g2,arm control (3G2 + NS1),2,0.6342,4.56,0.9138,n/a (nb_3 not in construct),n/a,6,0,ARM CONTROL FAIL: 3G2 recovers 0/16 of its own cryoEM epitope; lands on beta-ladder
+ctrl_3g2_s3,ctrl_3g2,arm control (3G2 + NS1),3,0.4128,7.21,0.9045,n/a (nb_3 not in construct),n/a,5,0,ARM CONTROL FAIL: 3G2 recovers 0/16 of its own cryoEM epitope; lands on beta-ladder
+ctrl_3g2_s4,ctrl_3g2,arm control (3G2 + NS1),4,0.5856,5.36,0.9105,n/a (nb_3 not in construct),n/a,5,0,ARM CONTROL FAIL: 3G2 recovers 0/16 of its own cryoEM epitope; lands on beta-ladder
+ctrl_3g2_s5,ctrl_3g2,arm control (3G2 + NS1),5,0.4495,7.0,0.9181,n/a (nb_3 not in construct),n/a,6,0,ARM CONTROL FAIL: 3G2 recovers 0/16 of its own cryoEM epitope; lands on beta-ladder
+tern_full_s1,tern_full,ternary (nb_3 + 3G2 + NS1),1,0.4885,5.73,0.9131,0,2;3;4;6;8;11;13;188;206;210;232;234;235;253;254,6,0,"INVALID: 3G2 occupies the beta-ladder (nb_3's epitope), displacing nb_3 to a decoy -- co-binding cannot be assessed"
+tern_full_s2,tern_full,ternary (nb_3 + 3G2 + NS1),2,0.3746,9.08,0.8838,0,33;35;36;37;39;70;71;74;113;115;116;118;119;120;157;162;163;164;166;168,5,0,"INVALID: 3G2 occupies the beta-ladder (nb_3's epitope), displacing nb_3 to a decoy -- co-binding cannot be assessed"
+tern_full_s3,tern_full,ternary (nb_3 + 3G2 + NS1),3,0.4018,7.42,0.8971,0,2;3;4;6;10;11;12;13;15;188;189;210,6,0,"INVALID: 3G2 occupies the beta-ladder (nb_3's epitope), displacing nb_3 to a decoy -- co-binding cannot be assessed"
+tern_full_s4,tern_full,ternary (nb_3 + 3G2 + NS1),4,0.3667,9.11,0.8933,0,33;35;36;37;38;39;71;74;115;116;118;119;120;122;123;156;157;162;163;168,5,0,"INVALID: 3G2 occupies the beta-ladder (nb_3's epitope), displacing nb_3 to a decoy -- co-binding cannot be assessed"
+tern_full_s5,tern_full,ternary (nb_3 + 3G2 + NS1),5,0.435,8.33,0.8949,0,35;36;37;38;39;71;74;113;115;116;118;119;120;122;123;124;160;161;162;168,5,0,"INVALID: 3G2 occupies the beta-ladder (nb_3's epitope), displacing nb_3 to a decoy -- co-binding cannot be assessed"

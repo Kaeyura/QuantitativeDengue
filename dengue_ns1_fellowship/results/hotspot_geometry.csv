@@ -1,0 +1,31 @@
+pair_or_subset,type,CA_CA_or_span_A,within_15A_paratope_reach,note
+269-272,pair,8.5,yes,intra-A
+272-274,pair,7.2,yes,intra-A
+269-274,pair,12.9,yes,intra-A
+294-296,pair,7.2,yes,intra-B
+269-296,pair,11.8,yes,cross-cluster pair IS individually reachable
+274-296,pair,17.4,no,CROSS
+272-296,pair,17.8,no,CROSS
+269-294,pair,18.6,no,CROSS
+274-294,pair,21.6,no,CROSS
+272-294,pair,23.6,no,CROSS
+
+--- all ten 3-hotspot subsets (gate requires >=3) ---,,,,
+269+272+274,3-subset,12.9,yes,ONLY 3-subset that fits
+269+274+296,3-subset,17.4,no,
+269+272+296,3-subset,17.8,no,
+272+274+296,3-subset,17.8,no,
+269+294+296,3-subset,18.6,no,
+269+274+294,3-subset,21.6,no,
+274+294+296,3-subset,21.6,no,
+269+272+294,3-subset,23.6,no,
+272+274+294,3-subset,23.6,no,
+272+294+296,3-subset,23.6,no,
+
+--- all five 4-hotspot subsets ---,,,,
+269+272+274+296,4-subset,17.8,no,smallest 4-subset span
+269+274+294+296,4-subset,21.6,no,
+269+272+274+294,4-subset,23.6,no,
+269+272+294+296,4-subset,23.6,no,
+272+274+294+296,4-subset,23.6,no,
+269+272+274+294+296,5-subset,23.6,no,full hotspot set

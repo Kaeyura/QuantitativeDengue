@@ -1,0 +1,73 @@
+{
+  "target": "Dengue virus NS1 (mature, 352 aa)",
+  "uniprot_refs": {
+    "DENV1": "P17763",
+    "DENV2": "P29990",
+    "DENV3": "Q6YMS4",
+    "DENV4": "P09866"
+  },
+  "ns1_polyprotein_span": {
+    "DENV1": [
+      776,
+      1127
+    ],
+    "DENV2": [
+      776,
+      1127
+    ],
+    "DENV3": [
+      774,
+      1125
+    ],
+    "DENV4": [
+      775,
+      1126
+    ]
+  },
+  "alignment": "gapless, all 4 serotypes = 352 columns; mature position numbering unambiguous",
+  "overall_identity_all4": "217/352 (61.6%)",
+  "recommended_structure": {
+    "pdb": "8WBE",
+    "serotype": "DENV-4",
+    "method": "cryo-EM",
+    "reso_A": 3.0,
+    "form": "hexamer (secreted-like, 3 dimers)",
+    "auth_numbering": "1-352 = mature NS1 (no offset)",
+    "alt_dimer": "8WBB (2.9 A, same strain)",
+    "alt_hexamer": "8WBD (2.9 A)"
+  },
+  "epitopes": {
+    "DirectionB_betaladder": {
+      "range": [
+        261,
+        305
+      ],
+      "identical_all4": "30/45 (67%)",
+      "mean_cons": 0.85,
+      "exposed": "yes (mean relSASA ~0.24-0.25)",
+      "buried_at_interface": "none",
+      "numbering": "maps 1:1 to 8WBE/8WBB/8WBD auth residues",
+      "verdict": "DESIGNABLE"
+    },
+    "AVOID_tip": {
+      "range": [
+        311,
+        352
+      ],
+      "identical_all4": "33/42 (79%)",
+      "note": "exposed & adjacent to Dir.B tip - avoid as instructed"
+    },
+    "DirectionA_wingloop": {
+      "range": [
+        104,
+        125
+      ],
+      "identical_all4": "11/22 (50%)",
+      "mean_cons": 0.82,
+      "exposed": "yes, highly (relSASA ~0.44-0.48)",
+      "buried_at_interface": "none",
+      "disorder": "108-128 unmodeled in DENV2 dimer 4O6B; 119-124 unmodeled in DENV4 8WBB",
+      "verdict": "RISKY - disordered + lowest conservation + Zika cross-reactivity risk"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "run": "seed-5 robustness (job 55f04ca8), nb3:NS1full 346aa, 6 Boltz-2 seeds, validated harness",
+  "epitope": "261-305",
+  "hotspots": [
+    269,
+    272,
+    274,
+    294,
+    296
+  ],
+  "contact_cutoff_A": 4.5,
+  "per_seed": [
+    {
+      "seed": 1,
+      "iptm": 0.643,
+      "n_contacts": 16,
+      "epitope_hits": 7,
+      "tip_hits": 6,
+      "hotspot_hits": 1,
+      "hs": {
+        "269": 4.0,
+        "272": 6.8,
+        "274": 6.4,
+        "294": 19.4,
+        "296": 13.1
+      },
+      "onepi": true
+    },
+    {
+      "seed": 2,
+      "iptm": 0.515,
+      "n_contacts": 14,
+      "epitope_hits": 6,
+      "tip_hits": 3,
+      "hotspot_hits": 0,
+      "hs": {
+        "269": 5.2,
+        "272": 5.0,
+        "274": 6.1,
+        "294": 19.6,
+        "296": 12.5
+      },
+      "onepi": true
+    },
+    {
+      "seed": 3,
+      "iptm": 0.778,
+      "n_contacts": 16,
+      "epitope_hits": 0,
+      "tip_hits": 1,
+      "hotspot_hits": 0,
+      "hs": {
+        "269": 20.0,
+        "272": 12.8,
+        "274": 6.3,
+        "294": 23.7,
+        "296": 22.3
+      },
+      "onepi": false
+    },
+    {
+      "seed": 4,
+      "iptm": 0.713,
+      "n_contacts": 18,
+      "epitope_hits": 0,
+      "tip_hits": 0,
+      "hotspot_hits": 0,
+      "hs": {
+        "269": 30.2,
+        "272": 19.0,
+        "274": 26.4,
+        "294": 43.6,
+        "296": 42.8
+      },
+      "onepi": false
+    },
+    {
+      "seed": 5,
+      "iptm": 0.752,
+      "n_contacts": 13,
+      "epitope_hits": 6,
+      "tip_hits": 6,
+      "hotspot_hits": 1,
+      "hs": {
+        "269": 3.9,
+        "272": 7.5,
+        "274": 7.7,
+        "294": 19.0,
+        "296": 12.2
+      },
+      "onepi": true
+    },
+    {
+      "seed": 6,
+      "iptm": 0.571,
+      "n_contacts": 15,
+      "epitope_hits": 0,
+      "tip_hits": 0,
+      "hotspot_hits": 0,
+      "hs": {
+        "269": 29.0,
+        "272": 18.9,
+        "274": 25.8,
+        "294": 43.9,
+        "296": 41.4
+      },
+      "onepi": false
+    }
+  ],
+  "summary": {
+    "iptm_mean": 0.662,
+    "iptm_range": [
+      0.515,
+      0.778
+    ],
+    "on_epitope_seeds": [
+      1,
+      2,
+      5
+    ],
+    "hotspot269_engaged_seeds": [
+      1,
+      5
+    ],
+    "finding": "On-epitope binding is reproducible (3/6 seeds: 1,2,5), NOT a lucky tail. Hotspot 269 engaged in 2/6 (seeds 1,5) at ~3.9-4.0A. ipTM does NOT track epitope fidelity: the two highest-ipTM seeds (3:0.778, 4:0.713) are OFF-epitope (N-terminus). Seed 5 reproduces historical value exactly (ipTM 0.752, 269 at 3.9A). Seed 5 remains the best on-target scaffold; the pose is a stable local solution, not noise."
+  }
+}

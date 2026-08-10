@@ -1,0 +1,9 @@
+design,interaction_pae,pae,pred_lddt,target_aligned_antibody_rmsd,target_aligned_cdr_rmsd,framework_aligned_antibody_rmsd,framework_aligned_cdr_rmsd,framework_aligned_H1_rmsd,framework_aligned_H2_rmsd,framework_aligned_H3_rmsd,framework_aligned_L1_rmsd,framework_aligned_L2_rmsd,framework_aligned_L3_rmsd
+nb_0_dldesign_0,19.57,8.53,0.91,15.0,16.46,0.61,1.15,0.58,0.3,2.05,,,
+nb_0_dldesign_1,16.78,7.38,0.91,17.49,13.46,0.56,1.01,1.04,0.38,1.41,,,
+nb_1_dldesign_0,15.75,7.06,0.91,2.46,2.28,0.65,1.23,0.57,0.64,1.78,,,
+nb_1_dldesign_1,3.65,2.05,0.92,1.65,1.11,0.48,0.62,0.56,0.3,0.8,,,
+nb_2_dldesign_0,17.44,7.62,0.92,25.38,17.37,0.5,0.92,1.26,0.49,0.75,,,
+nb_2_dldesign_1,17.19,7.52,0.92,27.48,18.11,0.59,1.15,1.38,1.26,0.6,,,
+nb_3_dldesign_0,18.51,8.25,0.9,13.63,10.89,0.92,1.92,0.63,0.48,2.83,,,
+nb_3_dldesign_1,19.09,8.49,0.91,9.29,6.72,0.8,1.61,0.65,0.35,2.37,,,

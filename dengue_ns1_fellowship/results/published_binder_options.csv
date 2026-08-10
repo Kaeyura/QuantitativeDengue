@@ -1,0 +1,13 @@
+arm_A,arm_B,centroid_sep_A,geometry,conservation_limiting_arm,pct_conserved_DENV1-4,blocker
+2B7,3G2,32.6,in band,3G2,31%,serotype-biased assay; both arms are Fabs (not VHH)
+2B7,4B8,33.5,in band,4B8,31%,serotype-biased assay; both arms are Fabs (not VHH)
+1G5.3,3G2,35.4,in band,3G2,31%,serotype-biased assay; both arms are Fabs (not VHH)
+1G5.3,4B8,36.4,in band,4B8,31%,serotype-biased assay; both arms are Fabs (not VHH)
+5E3,3G2,29.6,too close,3G2,31%,serotype-biased assay; both arms are Fabs (not VHH)
+5E3,4B8,30.5,in band,4B8,31%,serotype-biased assay; both arms are Fabs (not VHH)
+nb_3,3G2,34.5,in band,3G2,31%,serotype-biased assay; nb_3 arm is a predicted pose
+nb_3,4B8,35.4,in band,4B8,31%,serotype-biased assay; nb_3 arm is a predicted pose
+
+epitope_site,antibodies,pct_conserved,note
+beta-ladder,"2B7 (74%), 1G5.3 (65%), 5E3 (65%)",65-74%,all three mutually overlapping; 2B7 flavivirus-cross-reactive; 1G5.3 has solved ZIKV complex (7BSD)
+wing/connector,"3G2 (31%), 4B8 (31%)",31%,mutually overlapping; the ONLY published non-beta-ladder site

@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "diffusion_designs": 48,
+  "mpnn_sequences": 48,
+  "rf2_shortlist_size": 12,
+  "shortlist_design_ids": [
+    "rfd_design_042",
+    "rfd_design_025",
+    "rfd_design_017",
+    "rfd_design_036",
+    "rfd_design_029",
+    "rfd_design_018",
+    "rfd_design_033",
+    "rfd_design_001",
+    "rfd_design_022",
+    "rfd_design_009",
+    "rfd_design_027",
+    "rfd_design_024"
+  ],
+  "plddt_range": [
+    0.602,
+    0.897
+  ],
+  "pae_range": [
+    1.53,
+    5.96
+  ]
+}

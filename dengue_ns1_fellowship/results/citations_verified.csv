@@ -1,0 +1,11 @@
+claim,source,PMID,verification_route,status
+"mAb 2A5 recognises NS1 305-311, homologous to Plg 590-597","Chuang YC et al., J Immunol 2016;196:1218-26",26712948,PubMed esearch+efetch abstract; quoted verbatim,VERIFIED
+Plg mature numbering offset = +19 (signal peptide 1-19),UniProt P00747 feature annotation,-,UniProt REST ft_signal/ft_chain,VERIFIED
+C-terminal NS1 contains cross-reactive epitopes; dC NS1 deletes a.a. 271-352,"Wan SW et al., PLoS One 2014;9:e92495",24658118,"PubMed abstract, quoted",VERIFIED
+C-term epitopes cross-reactive with host Ags -> endothelial/platelet dysfunction,"Wan SW et al., J Immunol 2017;199:2834-44",28904127,PubMed abstract,VERIFIED
+anti-NS1 Abs cross-react with human platelets and endothelial cells,"Lin YS et al., Exp Biol Med 2011;236:515-23",21502191,PubMed abstract,VERIFIED
+dNS1 construct is the 153-312 region (RETAINS all 5 hotspots),"Nasar S et al., Sci Rep 2024;14:18883",39143088,"PubMed abstract, quoted",VERIFIED - CORRECTS v1
+"2B7 protective mAb; wing mediates cell binding, beta-ladder triggers downstream","Biering SB et al., Science 2021;371:194-200 (10.1126/science.abc0476)",33414220,PubMed abstract + DOI from articleids,VERIFIED
+2B7 contacts R299 (2.5 A) and T301 (4.3 A) via heavy chain 102/103,PDB 6WER,-,"structure downloaded from RCSB, contacts computed at 4.5 A",VERIFIED BY COMPUTATION (v1 asserted from memory)
+2B7 buries 250 A^2 (42%) of the forbidden tip 311-352,PDB 6WER,-,FreeSASA on complex vs separated chains,COMPUTED THIS SESSION
+v1 claim: 'safety construct deletes 271-352 removing 4 of 5 hotspots',-,-,conflated Wan 2014 (deletes 271-352) with Nasar 2024 (retains 153-312),RETRACTED - BACKWARDS

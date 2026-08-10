@@ -1,0 +1,6 @@
+test,value,verdict
+null model: random 7-mer best-match score,"mean 14.1, sd 3.5",calibration
+positive control (PMID 26712948): NS1 305-311 vs Plg mature 590-597 = UniProt 609-616,"GKLITEW vs GTLISPE, score 10.0, z=-1.2",FAIL - below random mean
+rank of true window among 804 Plg 7-mers,8th,not top-ranked
+scan's own top hit for that probe,GKKCQSW z=1.1 (unrelated),false positive
+CONCLUSION,linear BLOSUM 7-mer scanning cannot detect NS1 conformational mimicry,regional z-comparison DISCARDED - supports no recommendation

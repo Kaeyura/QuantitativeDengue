@@ -1,0 +1,39 @@
+{
+  "run": "positive-control harness (job b5b28eed)",
+  "protocol": "IDENTICAL to multi_validator job e4119870: AF2 ColabFold mmseqs2_uniref_env num-recycle 3 multimer_v3; Boltz-2 --use_msa_server recycling 3 diffusion_samples 1 --no_kernels",
+  "complexes": [
+    {
+      "name": "POS_VHH_HEWL",
+      "desc": "cAb-Lys3 VHH : hen egg-white lysozyme (PDB 1MEL) \u2014 TRUE crystallographic nanobody binder",
+      "af2_iptm": 0.16,
+      "af2_ptm": 0.54,
+      "boltz_iptm": 0.957,
+      "boltz_ptm": 0.943,
+      "boltz_plddt": 0.965
+    },
+    {
+      "name": "NEG_nb3_HEWL",
+      "desc": "nb3 : lysozyme \u2014 non-cognate negative",
+      "af2_iptm": 0.23,
+      "af2_ptm": 0.6,
+      "boltz_iptm": 0.422,
+      "boltz_ptm": 0.711,
+      "boltz_plddt": 0.896
+    },
+    {
+      "name": "nb3_NS1full",
+      "desc": "nb3 : full-length NS1 (346 aa) \u2014 truncation/baseline test",
+      "af2_iptm": 0.13,
+      "af2_ptm": 0.68,
+      "boltz_iptm": 0.591,
+      "boltz_ptm": 0.861,
+      "boltz_plddt": 0.884
+    }
+  ],
+  "conclusions": {
+    "AF2_multimer_ipTM_INVALID": "AF2-multimer ipTM = 0.16 for a TRUE crystallographic nanobody binder (1MEL) \u2014 below the 0.7 gate and BELOW the non-cognate negative (0.23). AF2-multimer ipTM cannot recognize nanobody binders under this single-model/MSA protocol. Every prior NS1 ranking on AF2 ipTM is invalid as a binder/non-binder discriminator.",
+    "Boltz2_ipTM_VALID": "Boltz-2 ipTM = 0.957 for the true binder vs 0.422 non-cognate \u2014 clean discrimination (gap 0.53). Boltz-2 is the valid metric for this design campaign.",
+    "truncation_confound_RESOLVED": "nb3 vs full-length NS1 gives Boltz ipTM 0.591 \u2014 well below the true-binder 0.957 and only modestly above the non-cognate 0.422. Truncation was NOT masking a real nb3 interface; nb3 is a weak/non-binder against NS1 on Boltz too. The historical 0.553 'baseline' is in the non-binder regime, not a bar to beat.",
+    "net": "Harness IS valid (via Boltz-2). The NS1-directionB negative result stands for the FAILED designs. AF2-multimer ipTM must be dropped as a selection metric; re-rank all campaigns on Boltz-2 ipTM + structural epitope-contact filter."
+  }
+}

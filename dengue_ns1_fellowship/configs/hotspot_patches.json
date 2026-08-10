@@ -1,0 +1,131 @@
+{
+ "Patch-1_central-ridge": {
+  "residues": [
+   269,
+   272,
+   274,
+   294,
+   296
+  ],
+  "n": 5,
+  "n_identical_all4": 5,
+  "mean_cons": 1.0,
+  "mean_relSASA_hex": 0.436,
+  "min_relSASA_hex": 0.332,
+  "per_residue": [
+   {
+    "res": 269,
+    "aa": "H",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.465
+   },
+   {
+    "res": 272,
+    "aa": "R",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.513
+   },
+   {
+    "res": 274,
+    "aa": "E",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.356
+   },
+   {
+    "res": 294,
+    "aa": "R",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.332
+   },
+   {
+    "res": 296,
+    "aa": "P",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.512
+   }
+  ]
+ },
+ "Patch-2_upper-strand": {
+  "residues": [
+   282,
+   284,
+   286,
+   289
+  ],
+  "n": 4,
+  "n_identical_all4": 3,
+  "mean_cons": 0.938,
+  "mean_relSASA_hex": 0.54,
+  "min_relSASA_hex": 0.478,
+  "per_residue": [
+   {
+    "res": 282,
+    "aa": "G",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.478
+   },
+   {
+    "res": 284,
+    "aa": "T",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.504
+   },
+   {
+    "res": 286,
+    "aa": "V",
+    "ident_all4": false,
+    "cons": 0.75,
+    "relSASA_hex": 0.489
+   },
+   {
+    "res": 289,
+    "aa": "E",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.688
+   }
+  ]
+ },
+ "Patch-3_Cterm-core": {
+  "residues": [
+   264,
+   294,
+   296
+  ],
+  "n": 3,
+  "n_identical_all4": 2,
+  "mean_cons": 0.917,
+  "mean_relSASA_hex": 0.426,
+  "min_relSASA_hex": 0.332,
+  "per_residue": [
+   {
+    "res": 264,
+    "aa": "T",
+    "ident_all4": false,
+    "cons": 0.75,
+    "relSASA_hex": 0.433
+   },
+   {
+    "res": 294,
+    "aa": "R",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.332
+   },
+   {
+    "res": 296,
+    "aa": "P",
+    "ident_all4": true,
+    "cons": 1.0,
+    "relSASA_hex": 0.512
+   }
+  ]
+ }
+}

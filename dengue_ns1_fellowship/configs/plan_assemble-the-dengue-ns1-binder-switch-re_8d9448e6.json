@@ -1,0 +1,81 @@
+{
+  "version": 3,
+  "created_at": "2026-08-06T14:24:08.282Z",
+  "task_summary": "Assemble the dengue NS1 binder/switch report: methods, figures, reconciliations, bundle, report",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Methods + missing figures",
+      "delegations": [
+        {
+          "name": "Assembly core",
+          "steps": [
+            {
+              "title": "Write methods.md",
+              "description": "One unified methods document: tool versions + three conda envs; 4.5 Å heavy-atom contact cutoff; target-side, epitope-filtered (261-305) burial convention with the three-number distinction stated; 5-seed protocol; the original acceptance gate and the evidence-based reason it was abandoned (gate inversion, rho=-0.888); the replacement epitope-fidelity criterion (>=4 contacts in 261-305, >=2 of 5 hotspots incl >=1 from cluster A). Replaces per-finding methods paragraphs."
+            },
+            {
+              "title": "Build the three missing figures",
+              "description": "Load figure-style, apply_figure_style() first. Fig for the rescue campaign (from rescue_results/summary CSVs), the Direction B re-derivation (from direction_b_burial.csv: epitope vs tip burial scatter r=0.707, 6/15 vs 0/15 vs 0/15 pass counts, 2B7 crystallographic reference), and the second-arm lead (from second_arm_conservation.csv: DENV1-4 84% vs EP2 vs beta-ladder, ZIKV risk, discriminating positions). Verify every claim-title against the plotted data before saving."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Reconcile stale documents",
+      "delegations": [
+        {
+          "name": "Reconciliation",
+          "steps": [
+            {
+              "title": "Reconcile binder_status.md and next_steps.md",
+              "description": "Update binder_status.md: fold in rescue (two full-length-validated candidates beat nb_3) and charge-null; stop framing nb_3 as THE result; remove the refuted paratope-charge recommendation. Update next_steps.md: replace the superseded three-day close with the current position (charge hypothesis refuted, two new leads, ternary invalidated)."
+            },
+            {
+              "title": "Reconcile switch_construction_plan and corrections_ledger",
+              "description": "New version of switch_construction_plan.md: remove the two-VHH ternary prediction as minimum-viable deliverable (invalidated by 3G2 control) — the switch deliverable is the specification not a model; remove the retracted ~370 Å² burial ceiling and the retracted 'five hotspots unsatisfiable' claim; adopt C-to-C terminus fusion (supersedes N-terminus claim from truncated model). Extend corrections_ledger.csv with this session's retractions: burial ceiling refuted, hotspot unsatisfiability withdrawn, charge hypothesis refuted, ternary deliverable invalidated, tip criterion refuted."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    },
+    {
+      "name": "Benchmark bundle + report",
+      "delegations": [
+        {
+          "name": "Bundle and report",
+          "steps": [
+            {
+              "title": "Build ns1_benchmark/ bundle",
+              "description": "Repo layout + README; one ranked-binder table tying design ID -> sequence -> structure -> scores for the full-length-validated candidates (onepi_pd_5_dldesign_1, seed5_pd_15_dldesign_1, nb_3, and the shortlist with the cropped-target caveat); the scoring harness (epitope-fidelity scorer: contacts in 261-305, per-seed hotspot frequency, on-epitope rate). This is a named certain deliverable and does not yet exist."
+            },
+            {
+              "title": "Draft report.md",
+              "description": "Assemble the report from all deliverables. Lead-decision (binder result vs methods findings) raised as an open decision for the authors, not decided silently. Enforce the WHAT-MUST-NOT-BE-CLAIMED list: 'characterised against a crystallographic reference', per-seed hotspot frequencies, no pose convergence, switch = specification not model, unresolved mimicry risk, Zika cross-reactivity live risk. Frame negative results as deliverables."
+            }
+          ]
+        }
+      ],
+      "id": "phase-2"
+    }
+  ],
+  "desired_outputs": [
+    "methods.md — unified pipeline methods document",
+    "fig14_rescue_campaign.png — rescue campaign figure",
+    "fig15_directionB_rederivation.png — Direction B tractability re-derivation figure",
+    "fig16_second_arm.png — second-arm lead figure",
+    "binder_status.md (reconciled)",
+    "next_steps.md (reconciled)",
+    "switch_construction_plan.md (reconciled, new version)",
+    "corrections_ledger.csv (extended with this session's retractions)",
+    "ns1_benchmark/ reproducible bundle (README, ranked-binder table, scoring harness, repo layout)",
+    "report.md — the assembled report"
+  ],
+  "feasibility": {
+    "rationale": "All research compute is finished; this is pure assembly from 9 internally-consistent finding documents, 11 data tables, and existing structures. No new predictions. Main risk is reintroducing one of the documented traps (burial conventions, conservation-window lookups, the tied-rho caveat) — mitigated by working only from the current findings and the verified data tables.",
+    "confidence": "high"
+  }
+}

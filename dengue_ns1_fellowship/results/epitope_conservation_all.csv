@@ -1,0 +1,45 @@
+epitope,pos,DENV1,DENV2,DENV3,DENV4,ZIKV,denv1_4_conserved,zika_divergent
+3G2,99,Q,A,Q,K,R,False,False
+3G2,100,G,G,G,G,G,True,False
+3G2,101,K,K,K,K,P,True,True
+3G2,102,K,R,R,R,Q,False,False
+3G2,145,D,N,S,N,L,False,False
+3G2,146,N,T,A,E,E,False,False
+3G2,147,Q,N,S,R,H,False,False
+3G2,174,S,K,V,G,D,False,False
+3G2,175,Y,Q,Y,S,Y,False,False
+3G2,176,T,D,T,S,S,False,False
+3G2,177,Q,V,Q,E,L,False,False
+3G2,178,V,F,L,V,E,False,False
+3G2,224,I,H,T,L,E,False,False
+3G2,227,K,K,K,K,K,True,False
+3G2,238,E,E,E,E,E,True,False
+3G2,245,K,K,K,K,K,True,False
+4B8,99,Q,A,Q,K,R,False,False
+4B8,100,G,G,G,G,G,True,False
+4B8,101,K,K,K,K,P,True,True
+4B8,102,K,R,R,R,Q,False,False
+4B8,146,N,T,A,E,E,False,False
+4B8,174,S,K,V,G,D,False,False
+4B8,175,Y,Q,Y,S,Y,False,False
+4B8,176,T,D,T,S,S,False,False
+4B8,177,Q,V,Q,E,L,False,False
+4B8,178,V,F,L,V,E,False,False
+4B8,224,I,H,T,L,E,False,False
+4B8,227,K,K,K,K,K,True,False
+4B8,245,K,K,K,K,K,True,False
+planned EP2,74,E,E,E,E,E,True,False
+planned EP2,77,H,H,Y,Y,A,False,False
+planned EP2,113,Y,Y,Y,Y,H,True,True
+planned EP2,115,W,W,W,W,W,True,False
+planned EP2,118,W,W,W,W,W,True,False
+planned EP2,119,G,G,G,G,G,True,False
+planned EP2,122,K,K,K,K,Y,True,True
+planned EP2,123,I,M,I,I,F,False,False
+nb_3 seed-5,269,H,H,H,H,H,True,False
+nb_3 seed-5,281,E,D,E,P,P,False,False
+nb_3 seed-5,299,R,R,R,R,R,True,False
+nb_3 seed-5,303,V,A,V,A,A,False,False
+nb_3 seed-5,304,T,S,S,S,S,False,False
+nb_3 seed-5,305,G,G,G,G,G,True,False
+nb_3 seed-5,306,K,K,K,K,R,True,True

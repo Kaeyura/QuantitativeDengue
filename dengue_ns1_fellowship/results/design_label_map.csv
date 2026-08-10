@@ -1,0 +1,11 @@
+label,pipeline_id,target_site,on_epitope_seeds_of_5,mean_epitope_contacts,mean_2B7_overlap_of_20,mean_ipTM,rank_by_epitope_fidelity,rank_by_mean_ipTM
+B1,onepi_pd_5_dldesign_1,β-ladder,5,6.2,9.6,0.379,1,9
+B2,onepi_pd_16_dldesign_0,β-ladder,4,4.8,7.6,0.344,2,10
+B3,onepi_pd_5_dldesign_0,β-ladder,2,2.6,3.6,0.405,3,8
+B4,onepi_pd_15_dldesign_0,β-ladder,1,2.2,2.8,0.578,4,5
+B5,onepi_pd_20_dldesign_1,β-ladder,1,1.6,2.2,0.591,5,4
+B6,onepi_pd_7_dldesign_1,β-ladder,1,1.4,2.2,0.478,6,7
+W1,seed5_pd_11_dldesign_0,wing / domain-I,1,1.4,2.0,0.713,7,1
+W2,seed5_pd_18_dldesign_1,wing / domain-I,1,1.4,2.4,0.492,8,6
+B7,onepi_pd_30_dldesign_1,β-ladder,1,1.2,1.6,0.648,9,3
+W3,seed5_pd_15_dldesign_1,wing / domain-I,0,0.0,0.0,0.675,10,2

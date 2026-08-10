@@ -1,0 +1,48 @@
+{
+  "gate": "Direction C (connector/domain-I concave patch) pre-pilot validation",
+  "patch_residues": [
+    61,
+    62,
+    63,
+    154,
+    180,
+    183,
+    198,
+    218
+  ],
+  "gate_1_crossreactivity": {
+    "question": "Is the patch flavivirus-conserved (cross-reactivity/false-positive risk) or dengue-specific?",
+    "denv_identity_of8": {
+      "DENV1": 8,
+      "DENV2": 8,
+      "DENV3": 7,
+      "DENV4": 8
+    },
+    "flavivirus_identity_of8": {
+      "ZIKV": 3,
+      "WNV": 4,
+      "JEV": 4,
+      "YFV": 2
+    },
+    "overall_ns1_identity_pct": {
+      "ZIKV": 55,
+      "WNV": 56,
+      "JEV": 52,
+      "YFV": 44
+    },
+    "verdict": "PASS \u2014 patch is dengue-specific (7-8/8 within DENV, only 2-4/8 in other flaviviruses). Low predicted Zika/WNV/JEV/YFV cross-reactivity.",
+    "caveat": "Sequence-level screen. A folded-epitope cross-reactivity risk cannot be fully excluded without structural NS1 comparison, but the divergence at key contact positions (154 E->L/Q, 183 L->V/I, 198 M->L/P, 218 I->G/L) is substantial."
+  },
+  "gate_2_interface_geometry": {
+    "question": "Do the 8 residues form a single coherent paratope-sized surface?",
+    "connected_components_at_12A": 1,
+    "max_CA_span_A": 20.5,
+    "convex_hull_area_A2": 664,
+    "n_heavy_atoms": 67,
+    "verdict": "PASS \u2014 single contiguous patch, 20.5 A span, 664 A^2, matches a single nanobody paratope footprint (~15-25 A, ~600-900 A^2)."
+  },
+  "pan_serotype_note": "Only position 63 varies within DENV (L in D1/D2/D4, M in D3) - conservative. Other 7 positions identical across all four serotypes.",
+  "overall_verdict": "BOTH GATES PASS. Direction C is scientifically sound as a target: dengue-specific (low cross-reactivity), pan-serotype conserved, single paratope-sized concave surface. Cleared to proceed to a small binder pilot.",
+  "remaining_unknown": "Designability (pass rate) is STILL unmeasured. Geometry is favorable (more concave than beta-ladder) but only a pilot run through the RFantibody pipeline can measure whether it yields passing designs (pAE < 5).",
+  "epitope_type_caveat": "Conformational, discontinuous epitope (61-63/154/180-183/198/218). Valid only on correctly folded native NS1; will not present on denatured antigen. Compatible with a native-capture biosensor."
+}

@@ -1,0 +1,15 @@
+{
+  "H1": [
+    24,
+    34
+  ],
+  "H2": [
+    50,
+    66
+  ],
+  "H3": [
+    99,
+    107
+  ],
+  "note": "Raw sequence indices (ANARCI-mapped Chothia). H3 is truncated (missing raw 108). Chothia insertion codes: 52A at raw 52, 100A at raw 105, 100B at raw 106."
+}

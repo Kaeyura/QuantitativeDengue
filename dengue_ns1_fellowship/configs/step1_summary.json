@@ -1,0 +1,70 @@
+{
+  "step": 1,
+  "title": "Replicate ipTM stability \u2014 nb_3 (5 MSA-backed Boltz-2 seeds)",
+  "design_id": "NS1_betaladder__nb_3_dldesign_0",
+  "validation": "MSA-backed full-length Boltz-2, --use_msa_server, recycling_steps=3, diffusion_samples=1, --no_kernels",
+  "per_seed": {
+    "1": {
+      "iptm": 0.6425813436508179,
+      "ptm": 0.8575077652931213,
+      "complex_plddt": 0.8777313828468323,
+      "complex_ipde_angstrom": 7.0349440574646
+    },
+    "2": {
+      "iptm": 0.5152785778045654,
+      "ptm": 0.8348293900489807,
+      "complex_plddt": 0.8784143328666687,
+      "complex_ipde_angstrom": 9.148721694946289
+    },
+    "3": {
+      "iptm": 0.7777828574180603,
+      "ptm": 0.890839159488678,
+      "complex_plddt": 0.9095852971076965,
+      "complex_ipde_angstrom": 3.4292540550231934
+    },
+    "4": {
+      "iptm": 0.7129169702529907,
+      "ptm": 0.8882938027381897,
+      "complex_plddt": 0.8599650859832764,
+      "complex_ipde_angstrom": 5.557150363922119
+    },
+    "5": {
+      "iptm": 0.7522148489952087,
+      "ptm": 0.8884928226470947,
+      "complex_plddt": 0.8927759528160095,
+      "complex_ipde_angstrom": 5.291184902191162
+    }
+  },
+  "iptm_distribution": {
+    "values": [
+      0.6426,
+      0.5153,
+      0.7778,
+      0.7129,
+      0.7522
+    ],
+    "min": 0.5153,
+    "median": 0.7129,
+    "mean": 0.6802,
+    "max": 0.7778,
+    "range": 0.2625,
+    "stdev": 0.1053
+  },
+  "gate_evaluation": {
+    "gate_definition_source": "originally-locked Step-1 gate (unchanged from design)",
+    "proceed_criterion": "median ipTM > 0.65",
+    "stop_criterion": "max ipTM < 0.60",
+    "fragile_flag_criterion": "range (max-min) > 0.15 -> proceed cautiously",
+    "median": 0.7129,
+    "max": 0.7778,
+    "range": 0.2625,
+    "median_gt_0.65": true,
+    "max_lt_0.60_stop": false,
+    "fragile": true,
+    "n_replicates_clearing_0.70": 3,
+    "decision": "PROCEED to Step 2 (cautiously \u2014 fragile flag raised)",
+    "correction_note": "An earlier version of this file evaluated a loosened gate (median>=0.60 AND no replica<0.45). That was not the locked criterion and has been reverted. Result is unchanged: median 0.713 > 0.65 and max 0.778 > 0.60, so PROCEED holds under the original gate; range 0.26 > 0.15 raises the fragile flag."
+  },
+  "key_finding": "Original single-sample MSA ipTM (0.553) was scatter low. True median across 5 seeds is 0.713, with 3/5 seeds (3,4,5) already clearing the 0.70 threshold. Seed 3 is best: ipTM 0.778, pLDDT 0.910, iPDE 3.43 \u00c5 (interface distance error already < 5 \u00c5).",
+  "caveat": "Range 0.26 flags binding-mode sensitivity to diffusion seed \u2014 the interface is real but not fully rigid. Step 2 refinement should aim to tighten this spread, not just raise the peak."
+}

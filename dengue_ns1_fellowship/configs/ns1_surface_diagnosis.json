@@ -1,0 +1,95 @@
+{
+  "question": "Why do de novo RFdiffusion binders fail AF2 validation on DENV NS1 (0/50, pAE ~26-28A)?",
+  "method": {
+    "curvature": "signed local surface curvature (+concave/-convex), hexamer context, freesasa exposure filter RSA>=0.15",
+    "cavity": "fpocket on DENV-2 monomer (9W22 chain A) and biological hexamer (external pockets only)",
+    "conservation": "per-residue DENV1-4 conservation from existing gap-free alignment"
+  },
+  "calibration": {
+    "curvature_range_observed": [
+      -0.356,
+      0.291
+    ],
+    "note": "even the single most-concave residue reaches only +0.29; best contiguous PATCH mean is +0.070 (marginal)"
+  },
+  "task1_current_patches": {
+    "P1_central-ridge_269_272_274_294_296": {
+      "mean_curvature": -0.034,
+      "verdict": "convex/flat",
+      "bindable": false,
+      "conservation": 1.0
+    },
+    "P2_upper-strand_282_284_286_289": {
+      "mean_curvature": -0.126,
+      "verdict": "convex/flat",
+      "bindable": false,
+      "conservation": 0.94
+    },
+    "fpocket_best_monomer_score": 0.254,
+    "fpocket_best_hexamer_external_score": 0.122,
+    "reading": "Both target patches are convex-to-flat. No druggable cavity anywhere on the accessible surface (all fpocket scores << 0.5). P1's name 'central ridge' is literal - it protrudes."
+  },
+  "task2_best_alternative_patches": [
+    {
+      "rank": 1,
+      "seed": 15,
+      "members": "1;12;14;15",
+      "mean_curvature": 0.07,
+      "bindability": 0.241,
+      "mean_conservation": 1.0,
+      "region": "wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+    },
+    {
+      "rank": 2,
+      "seed": 123,
+      "members": "73;74;77;118;119;122;123;126",
+      "mean_curvature": 0.062,
+      "bindability": 0.213,
+      "mean_conservation": 0.812,
+      "region": "wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+    },
+    {
+      "rank": 3,
+      "seed": 118,
+      "members": "74;77;113;115;118;119;122;123",
+      "mean_curvature": 0.054,
+      "bindability": 0.186,
+      "mean_conservation": 0.906,
+      "region": "wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+    },
+    {
+      "rank": 4,
+      "seed": 69,
+      "members": "62;69;70;73;74;91;92;93",
+      "mean_curvature": 0.054,
+      "bindability": 0.186,
+      "mean_conservation": 0.906,
+      "region": "wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+    },
+    {
+      "rank": 5,
+      "seed": 14,
+      "members": "10;12;14;15",
+      "mean_curvature": 0.048,
+      "bindability": 0.165,
+      "mean_conservation": 0.938,
+      "region": "wing/domain-I (Dir A territory: disordered, flavivirus cross-react)"
+    },
+    {
+      "rank": 6,
+      "seed": 324,
+      "members": "272;274;276;278;281;324;325;326",
+      "mean_curvature": 0.042,
+      "bindability": 0.144,
+      "mean_conservation": 0.781,
+      "region": "beta-ladder (Dir B primary epitope);tip (host-mimicry, avoid)"
+    }
+  ],
+  "task3_verdict": "c",
+  "verdict_text": "(c) The entire accessible NS1 surface is flat-to-convex with no good concave conserved pocket. The most concave patches reach only +0.07 mean curvature (marginal) and cluster in the wing/domain-I region (res 62-126) - the flavivirus-conserved, Zika-cross-reactive, disordered territory the brief flags as high-risk for a diagnostic. So the geometry does NOT support the binder-length hypothesis (a): regenerating at 90-120 aa on the same flat patch is unlikely to move interface pAE off the floor. Switching to a marginally-more-concave wing patch (b) trades geometry for cross-reactivity risk. This is a genuine tractability finding: RFdiffusion de novo binders, which strongly prefer concave pockets, are a poor fit for NS1's flat beta-ladder surface.",
+  "caveats": [
+    "fpocket concavity is a small-molecule druggability proxy; protein-protein interfaces are flatter than ligand pockets, so 'no druggable pocket' does not mean 'no protein binder is possible' - only that reliable de novo design is hard here.",
+    "The curvature index is a geometric proxy, not a validated binder-success predictor.",
+    "The strongest evidence is the CONVERGENCE of two independent signals: flat/convex geometry (this analysis) + 0/50 AF2 interface failure (prior run). Together they point to genuine target difficulty, not merely short binders."
+  ]
+}

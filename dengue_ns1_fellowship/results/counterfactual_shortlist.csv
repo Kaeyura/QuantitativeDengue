@@ -1,0 +1,11 @@
+design,mean_iptm,on_epitope_rate,mean_contacts,rank_iptm,rank_fidelity,rank_shift
+seed5_pd_11_dldesign_0,0.71306,0.2,1.4,1,7,-6
+seed5_pd_15_dldesign_1,0.6746800000000001,0.0,0.0,2,10,-8
+onepi_pd_30_dldesign_1,0.6482,0.2,1.2,3,9,-6
+onepi_pd_20_dldesign_1,0.5912200000000001,0.2,1.6,4,5,-1
+onepi_pd_15_dldesign_0,0.5775,0.2,2.2,5,4,1
+seed5_pd_18_dldesign_1,0.49234,0.2,1.4,6,8,-2
+onepi_pd_7_dldesign_1,0.47759999999999997,0.2,1.4,7,6,1
+onepi_pd_5_dldesign_0,0.40514,0.4,2.6,8,3,5
+onepi_pd_5_dldesign_1,0.37936000000000003,1.0,6.2,9,1,8
+onepi_pd_16_dldesign_0,0.34371999999999997,0.8,4.8,10,2,8

@@ -1,0 +1,10 @@
+hotspot,cluster,nearest_forbidden_tip_residue,min_heavy_atom_dist_A,interpretation
+269,A,330,3.9,direct vdW contact - cannot be spatially separated
+272,A,325,4.3,direct vdW contact - cannot be spatially separated
+274,A,324,3.0,direct vdW contact - cannot be spatially separated
+294,B,334,2.4,direct vdW contact - cannot be spatially separated
+296,B,336,2.7,direct vdW contact - cannot be spatially separated
+
+footprint_analysis,,,,
+15A paratope centred on cluster A,,,,18 beta-ladder residues + 12 FORBIDDEN tip residues (321-332)
+beta-ladder-only accessible pool at 12A,,387 A2,,realistic burial 194-232 A2 (50-60% occlusion of 387)

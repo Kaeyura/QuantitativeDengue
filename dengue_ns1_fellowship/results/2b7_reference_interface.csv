@@ -1,0 +1,11 @@
+quantity,value,source
+PDB entry,6WER,RCSB
+BSA per side (A^2),602,computed from 6WER
+NS1-side total burial (A^2),597,computed
+epitope 261-305 burial (A^2),320,computed
+FORBIDDEN tip 311-352 burial (A^2),250 (42% of interface),computed
+epitope residues contacted,"269,270,281,282,299,301,302,303,304,305,307",4.5A cutoff
+tip residues contacted,"326,327,328,330,343,344,345,346,347",4.5A cutoff
+R299 contact,2.5 A to Fab heavy 102 (CDR-H3 region),computed
+T301 contact,4.3 A to Fab heavy 103 (CDR-H3 region),computed
+nb_3 seed-5 epitope burial for comparison,356 A^2 (EXCEEDS 2B7's 320),prior cell

@@ -1,0 +1,1286 @@
+{
+  "note": "Phase 1b: RFdiffusion partial diffusion re-seeded from seed5_pd_9_dldesign_0 (the one on-epitope design from Phase 1/2). Heavy-atom, clash-floor (1.5-4.5A) contact analysis applied from the start per lesson learned in Phase 1.",
+  "residue_mapping": {
+    "native_range": [
+      255,
+      310
+    ],
+    "renumbered_range": [
+      119,
+      174
+    ],
+    "offset": -136
+  },
+  "hotspot_native_to_renum": {
+    "269": 133,
+    "272": 136,
+    "274": 138,
+    "294": 158,
+    "296": 160
+  },
+  "designs": [
+    {
+      "name": "onepi_pd_16_dldesign_0",
+      "plddt": 0.872,
+      "n_hotspot_contacts": 4,
+      "hotspots_engaged": [
+        272,
+        274,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.22,
+        "272": 2.23,
+        "274": 3.5,
+        "294": 3.09,
+        "296": 2.32
+      },
+      "n_epitope_contacts": 18,
+      "n_total_contacts": 20,
+      "overall_min_dist": 0.562,
+      "n_severe_clash_pairs": 19
+    },
+    {
+      "name": "onepi_pd_15_dldesign_0",
+      "plddt": 0.878,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        274,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.91,
+        "272": 1.44,
+        "274": 1.85,
+        "294": 2.99,
+        "296": 1.53
+      },
+      "n_epitope_contacts": 20,
+      "n_total_contacts": 21,
+      "overall_min_dist": 0.247,
+      "n_severe_clash_pairs": 33
+    },
+    {
+      "name": "onepi_pd_5_dldesign_0",
+      "plddt": 0.875,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        269,
+        272,
+        294
+      ],
+      "hotspot_dists": {
+        "269": 1.53,
+        "272": 4.41,
+        "274": 5.03,
+        "294": 4.5,
+        "296": 1.5
+      },
+      "n_epitope_contacts": 18,
+      "n_total_contacts": 22,
+      "overall_min_dist": 0.187,
+      "n_severe_clash_pairs": 14
+    },
+    {
+      "name": "onepi_pd_28_dldesign_0",
+      "plddt": 0.866,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        269,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.51,
+        "272": 9.96,
+        "274": 10.26,
+        "294": 1.89,
+        "296": 2.53
+      },
+      "n_epitope_contacts": 18,
+      "n_total_contacts": 21,
+      "overall_min_dist": 0.889,
+      "n_severe_clash_pairs": 2
+    },
+    {
+      "name": "onepi_pd_7_dldesign_1",
+      "plddt": 0.879,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        272,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.99,
+        "272": 3.69,
+        "274": 6.49,
+        "294": 4.18,
+        "296": 2.09
+      },
+      "n_epitope_contacts": 17,
+      "n_total_contacts": 17,
+      "overall_min_dist": 0.267,
+      "n_severe_clash_pairs": 30
+    },
+    {
+      "name": "onepi_pd_5_dldesign_1",
+      "plddt": 0.87,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        269,
+        274,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.66,
+        "272": 4.99,
+        "274": 3.83,
+        "294": 4.86,
+        "296": 1.82
+      },
+      "n_epitope_contacts": 16,
+      "n_total_contacts": 18,
+      "overall_min_dist": 0.312,
+      "n_severe_clash_pairs": 32
+    },
+    {
+      "name": "onepi_pd_18_dldesign_0",
+      "plddt": 0.877,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        269,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.22,
+        "272": 5.9,
+        "274": 11.36,
+        "294": 4.2,
+        "296": 1.75
+      },
+      "n_epitope_contacts": 15,
+      "n_total_contacts": 16,
+      "overall_min_dist": 0.58,
+      "n_severe_clash_pairs": 5
+    },
+    {
+      "name": "onepi_pd_20_dldesign_1",
+      "plddt": 0.848,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        272,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.43,
+        "272": 2.73,
+        "274": 1.46,
+        "294": 4.13,
+        "296": 2.28
+      },
+      "n_epitope_contacts": 15,
+      "n_total_contacts": 17,
+      "overall_min_dist": 0.196,
+      "n_severe_clash_pairs": 28
+    },
+    {
+      "name": "onepi_pd_19_dldesign_0",
+      "plddt": 0.863,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        269,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.47,
+        "272": 5.63,
+        "274": 10.34,
+        "294": 3.58,
+        "296": 3.58
+      },
+      "n_epitope_contacts": 14,
+      "n_total_contacts": 14,
+      "overall_min_dist": 0.988,
+      "n_severe_clash_pairs": 1
+    },
+    {
+      "name": "onepi_pd_24_dldesign_1",
+      "plddt": 0.875,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        269,
+        272,
+        294
+      ],
+      "hotspot_dists": {
+        "269": 1.53,
+        "272": 3.6,
+        "274": 10.27,
+        "294": 4.47,
+        "296": 1.38
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 13,
+      "overall_min_dist": 0.136,
+      "n_severe_clash_pairs": 3
+    },
+    {
+      "name": "onepi_pd_20_dldesign_0",
+      "plddt": 0.844,
+      "n_hotspot_contacts": 3,
+      "hotspots_engaged": [
+        269,
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.12,
+        "272": 10.35,
+        "274": 10.05,
+        "294": 3.52,
+        "296": 1.74
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 15,
+      "overall_min_dist": 0.367,
+      "n_severe_clash_pairs": 8
+    },
+    {
+      "name": "onepi_pd_12_dldesign_1",
+      "plddt": 0.869,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 8.5,
+        "272": 14.45,
+        "274": 9.83,
+        "294": 2.8,
+        "296": 3.79
+      },
+      "n_epitope_contacts": 19,
+      "n_total_contacts": 22,
+      "overall_min_dist": 0.418,
+      "n_severe_clash_pairs": 6
+    },
+    {
+      "name": "onepi_pd_12_dldesign_0",
+      "plddt": 0.87,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.36,
+        "272": 8.04,
+        "274": 8.11,
+        "294": 2.93,
+        "296": 2.64
+      },
+      "n_epitope_contacts": 17,
+      "n_total_contacts": 17,
+      "overall_min_dist": 0.324,
+      "n_severe_clash_pairs": 3
+    },
+    {
+      "name": "onepi_pd_30_dldesign_1",
+      "plddt": 0.859,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        274,
+        294
+      ],
+      "hotspot_dists": {
+        "269": 1.28,
+        "272": 4.74,
+        "274": 4.48,
+        "294": 4.09,
+        "296": 1.34
+      },
+      "n_epitope_contacts": 17,
+      "n_total_contacts": 17,
+      "overall_min_dist": 0.284,
+      "n_severe_clash_pairs": 25
+    },
+    {
+      "name": "onepi_pd_9_dldesign_0",
+      "plddt": 0.857,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        272,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.05,
+        "272": 2.51,
+        "274": 5.63,
+        "294": 8.38,
+        "296": 4.47
+      },
+      "n_epitope_contacts": 17,
+      "n_total_contacts": 18,
+      "overall_min_dist": 0.4,
+      "n_severe_clash_pairs": 9
+    },
+    {
+      "name": "onepi_pd_11_dldesign_0",
+      "plddt": 0.883,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        272,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.18,
+        "272": 1.62,
+        "274": 5.68,
+        "294": 6.59,
+        "296": 1.76
+      },
+      "n_epitope_contacts": 14,
+      "n_total_contacts": 15,
+      "overall_min_dist": 0.699,
+      "n_severe_clash_pairs": 6
+    },
+    {
+      "name": "onepi_pd_14_dldesign_0",
+      "plddt": 0.876,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.61,
+        "272": 0.87,
+        "274": 0.69,
+        "294": 3.58,
+        "296": 3.5
+      },
+      "n_epitope_contacts": 14,
+      "n_total_contacts": 15,
+      "overall_min_dist": 0.082,
+      "n_severe_clash_pairs": 50
+    },
+    {
+      "name": "onepi_pd_31_dldesign_1",
+      "plddt": 0.875,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 3.87,
+        "272": 9.72,
+        "274": 6.92,
+        "294": 4.59,
+        "296": 3.32
+      },
+      "n_epitope_contacts": 14,
+      "n_total_contacts": 16,
+      "overall_min_dist": 0.312,
+      "n_severe_clash_pairs": 27
+    },
+    {
+      "name": "onepi_pd_26_dldesign_0",
+      "plddt": 0.865,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.06,
+        "272": 6.75,
+        "274": 10.42,
+        "294": 4.53,
+        "296": 4.01
+      },
+      "n_epitope_contacts": 14,
+      "n_total_contacts": 14,
+      "overall_min_dist": 1.604,
+      "n_severe_clash_pairs": 0
+    },
+    {
+      "name": "onepi_pd_21_dldesign_1",
+      "plddt": 0.853,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        274,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.05,
+        "272": 0.64,
+        "274": 3.62,
+        "294": 6.13,
+        "296": 2.18
+      },
+      "n_epitope_contacts": 14,
+      "n_total_contacts": 15,
+      "overall_min_dist": 0.049,
+      "n_severe_clash_pairs": 12
+    },
+    {
+      "name": "onepi_pd_17_dldesign_1",
+      "plddt": 0.865,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        272,
+        274
+      ],
+      "hotspot_dists": {
+        "269": 0.73,
+        "272": 1.91,
+        "274": 3.87,
+        "294": 0.78,
+        "296": 0.71
+      },
+      "n_epitope_contacts": 13,
+      "n_total_contacts": 15,
+      "overall_min_dist": 0.208,
+      "n_severe_clash_pairs": 27
+    },
+    {
+      "name": "onepi_pd_2_dldesign_1",
+      "plddt": 0.884,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.04,
+        "272": 8.91,
+        "274": 12.83,
+        "294": 7.01,
+        "296": 2.71
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 14,
+      "overall_min_dist": 0.536,
+      "n_severe_clash_pairs": 3
+    },
+    {
+      "name": "onepi_pd_4_dldesign_0",
+      "plddt": 0.877,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        294,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.48,
+        "272": 5.25,
+        "274": 9.1,
+        "294": 4.22,
+        "296": 2.8
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 15,
+      "overall_min_dist": 0.253,
+      "n_severe_clash_pairs": 19
+    },
+    {
+      "name": "onepi_pd_2_dldesign_0",
+      "plddt": 0.874,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.77,
+        "272": 8.63,
+        "274": 10.83,
+        "294": 5.17,
+        "296": 3.01
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.353,
+      "n_severe_clash_pairs": 2
+    },
+    {
+      "name": "onepi_pd_27_dldesign_1",
+      "plddt": 0.862,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        272,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.33,
+        "272": 2.43,
+        "274": 5.84,
+        "294": 6.88,
+        "296": 4.17
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.329,
+      "n_severe_clash_pairs": 11
+    },
+    {
+      "name": "onepi_pd_13_dldesign_0",
+      "plddt": 0.86,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.9,
+        "272": 5.44,
+        "274": 10.88,
+        "294": 4.52,
+        "296": 1.63
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.177,
+      "n_severe_clash_pairs": 7
+    },
+    {
+      "name": "onepi_pd_17_dldesign_0",
+      "plddt": 0.86,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        272,
+        294
+      ],
+      "hotspot_dists": {
+        "269": 0.81,
+        "272": 2.12,
+        "274": 5.36,
+        "294": 1.67,
+        "296": 0.41
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 15,
+      "overall_min_dist": 0.41,
+      "n_severe_clash_pairs": 23
+    },
+    {
+      "name": "onepi_pd_30_dldesign_0",
+      "plddt": 0.828,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        272
+      ],
+      "hotspot_dists": {
+        "269": 2.0,
+        "272": 3.21,
+        "274": 0.86,
+        "294": 0.82,
+        "296": 1.17
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 18,
+      "overall_min_dist": 0.171,
+      "n_severe_clash_pairs": 63
+    },
+    {
+      "name": "onepi_pd_24_dldesign_0",
+      "plddt": 0.876,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        272,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.92,
+        "272": 3.32,
+        "274": 8.43,
+        "294": 8.53,
+        "296": 2.96
+      },
+      "n_epitope_contacts": 11,
+      "n_total_contacts": 13,
+      "overall_min_dist": 0.547,
+      "n_severe_clash_pairs": 11
+    },
+    {
+      "name": "onepi_pd_15_dldesign_1",
+      "plddt": 0.875,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 3.41,
+        "272": 7.52,
+        "274": 11.98,
+        "294": 5.36,
+        "296": 2.44
+      },
+      "n_epitope_contacts": 11,
+      "n_total_contacts": 11,
+      "overall_min_dist": 0.209,
+      "n_severe_clash_pairs": 6
+    },
+    {
+      "name": "onepi_pd_1_dldesign_1",
+      "plddt": 0.872,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.7,
+        "272": 10.8,
+        "274": 13.29,
+        "294": 4.82,
+        "296": 3.5
+      },
+      "n_epitope_contacts": 11,
+      "n_total_contacts": 13,
+      "overall_min_dist": 0.227,
+      "n_severe_clash_pairs": 12
+    },
+    {
+      "name": "onepi_pd_22_dldesign_1",
+      "plddt": 0.872,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.08,
+        "272": 5.77,
+        "274": 9.88,
+        "294": 5.54,
+        "296": 2.02
+      },
+      "n_epitope_contacts": 11,
+      "n_total_contacts": 11,
+      "overall_min_dist": 0.29,
+      "n_severe_clash_pairs": 8
+    },
+    {
+      "name": "onepi_pd_11_dldesign_1",
+      "plddt": 0.873,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.19,
+        "272": 5.36,
+        "274": 11.13,
+        "294": 9.76,
+        "296": 3.96
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.485,
+      "n_severe_clash_pairs": 5
+    },
+    {
+      "name": "onepi_pd_18_dldesign_1",
+      "plddt": 0.871,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        272,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.3,
+        "272": 4.18,
+        "274": 7.69,
+        "294": 6.51,
+        "296": 2.34
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 10,
+      "overall_min_dist": 0.303,
+      "n_severe_clash_pairs": 6
+    },
+    {
+      "name": "onepi_pd_21_dldesign_0",
+      "plddt": 0.85,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        274,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.3,
+        "272": 1.43,
+        "274": 3.04,
+        "294": 7.09,
+        "296": 2.88
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 10,
+      "overall_min_dist": 0.304,
+      "n_severe_clash_pairs": 25
+    },
+    {
+      "name": "onepi_pd_7_dldesign_0",
+      "plddt": 0.87,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 3.31,
+        "272": 7.15,
+        "274": 12.02,
+        "294": 6.82,
+        "296": 3.42
+      },
+      "n_epitope_contacts": 9,
+      "n_total_contacts": 9,
+      "overall_min_dist": 0.216,
+      "n_severe_clash_pairs": 9
+    },
+    {
+      "name": "onepi_pd_6_dldesign_1",
+      "plddt": 0.868,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        269,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 2.54,
+        "272": 6.7,
+        "274": 9.62,
+        "294": 5.69,
+        "296": 2.51
+      },
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 8,
+      "overall_min_dist": 0.862,
+      "n_severe_clash_pairs": 2
+    },
+    {
+      "name": "onepi_pd_10_dldesign_1",
+      "plddt": 0.862,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        274,
+        294
+      ],
+      "hotspot_dists": {
+        "269": 0.49,
+        "272": 0.27,
+        "274": 3.14,
+        "294": 3.85,
+        "296": 0.24
+      },
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 11,
+      "overall_min_dist": 0.165,
+      "n_severe_clash_pairs": 30
+    },
+    {
+      "name": "onepi_pd_16_dldesign_1",
+      "plddt": 0.87,
+      "n_hotspot_contacts": 2,
+      "hotspots_engaged": [
+        274,
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.92,
+        "272": 0.8,
+        "274": 1.92,
+        "294": 8.41,
+        "296": 2.64
+      },
+      "n_epitope_contacts": 6,
+      "n_total_contacts": 7,
+      "overall_min_dist": 0.414,
+      "n_severe_clash_pairs": 26
+    },
+    {
+      "name": "onepi_pd_0_dldesign_0",
+      "plddt": 0.867,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        294
+      ],
+      "hotspot_dists": {
+        "269": 0.15,
+        "272": 0.6,
+        "274": 0.54,
+        "294": 2.66,
+        "296": 0.32
+      },
+      "n_epitope_contacts": 14,
+      "n_total_contacts": 16,
+      "overall_min_dist": 0.149,
+      "n_severe_clash_pairs": 47
+    },
+    {
+      "name": "onepi_pd_8_dldesign_0",
+      "plddt": 0.887,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        272
+      ],
+      "hotspot_dists": {
+        "269": 0.72,
+        "272": 1.7,
+        "274": 0.52,
+        "294": 1.44,
+        "296": 0.68
+      },
+      "n_epitope_contacts": 13,
+      "n_total_contacts": 14,
+      "overall_min_dist": 0.311,
+      "n_severe_clash_pairs": 56
+    },
+    {
+      "name": "onepi_pd_14_dldesign_1",
+      "plddt": 0.883,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 9.02,
+        "272": 13.91,
+        "274": 10.75,
+        "294": 0.68,
+        "296": 1.63
+      },
+      "n_epitope_contacts": 13,
+      "n_total_contacts": 13,
+      "overall_min_dist": 0.127,
+      "n_severe_clash_pairs": 31
+    },
+    {
+      "name": "onepi_pd_23_dldesign_0",
+      "plddt": 0.879,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        269
+      ],
+      "hotspot_dists": {
+        "269": 1.87,
+        "272": 8.19,
+        "274": 11.66,
+        "294": 0.37,
+        "296": 0.71
+      },
+      "n_epitope_contacts": 13,
+      "n_total_contacts": 13,
+      "overall_min_dist": 0.295,
+      "n_severe_clash_pairs": 12
+    },
+    {
+      "name": "onepi_pd_22_dldesign_0",
+      "plddt": 0.877,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.93,
+        "272": 6.83,
+        "274": 8.29,
+        "294": 5.73,
+        "296": 3.82
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.347,
+      "n_severe_clash_pairs": 5
+    },
+    {
+      "name": "onepi_pd_28_dldesign_1",
+      "plddt": 0.877,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        274
+      ],
+      "hotspot_dists": {
+        "269": 0.54,
+        "272": 0.53,
+        "274": 1.89,
+        "294": 5.19,
+        "296": 1.32
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 14,
+      "overall_min_dist": 0.126,
+      "n_severe_clash_pairs": 12
+    },
+    {
+      "name": "onepi_pd_29_dldesign_1",
+      "plddt": 0.868,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.28,
+        "272": 4.86,
+        "274": 5.44,
+        "294": 8.43,
+        "296": 3.08
+      },
+      "n_epitope_contacts": 12,
+      "n_total_contacts": 16,
+      "overall_min_dist": 0.277,
+      "n_severe_clash_pairs": 14
+    },
+    {
+      "name": "onepi_pd_29_dldesign_0",
+      "plddt": 0.86,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.05,
+        "272": 6.18,
+        "274": 11.49,
+        "294": 4.99,
+        "296": 2.86
+      },
+      "n_epitope_contacts": 11,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.461,
+      "n_severe_clash_pairs": 6
+    },
+    {
+      "name": "onepi_pd_23_dldesign_1",
+      "plddt": 0.894,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        274
+      ],
+      "hotspot_dists": {
+        "269": 15.35,
+        "272": 10.89,
+        "274": 3.62,
+        "294": 13.92,
+        "296": 15.43
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 10,
+      "overall_min_dist": 1.71,
+      "n_severe_clash_pairs": 0
+    },
+    {
+      "name": "onepi_pd_26_dldesign_1",
+      "plddt": 0.881,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        269
+      ],
+      "hotspot_dists": {
+        "269": 2.75,
+        "272": 5.33,
+        "274": 10.66,
+        "294": 7.05,
+        "296": 4.53
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 11,
+      "overall_min_dist": 0.219,
+      "n_severe_clash_pairs": 5
+    },
+    {
+      "name": "onepi_pd_25_dldesign_1",
+      "plddt": 0.873,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.41,
+        "272": 6.15,
+        "274": 8.24,
+        "294": 5.67,
+        "296": 2.25
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 10,
+      "overall_min_dist": 0.927,
+      "n_severe_clash_pairs": 1
+    },
+    {
+      "name": "onepi_pd_9_dldesign_1",
+      "plddt": 0.864,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.27,
+        "272": 0.93,
+        "274": 5.38,
+        "294": 5.67,
+        "296": 2.44
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 14,
+      "overall_min_dist": 0.227,
+      "n_severe_clash_pairs": 26
+    },
+    {
+      "name": "onepi_pd_19_dldesign_1",
+      "plddt": 0.862,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        274
+      ],
+      "hotspot_dists": {
+        "269": 10.2,
+        "272": 9.56,
+        "274": 2.77,
+        "294": 9.86,
+        "296": 7.85
+      },
+      "n_epitope_contacts": 10,
+      "n_total_contacts": 14,
+      "overall_min_dist": 0.169,
+      "n_severe_clash_pairs": 25
+    },
+    {
+      "name": "onepi_pd_10_dldesign_0",
+      "plddt": 0.876,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.03,
+        "272": 6.87,
+        "274": 10.36,
+        "294": 8.63,
+        "296": 2.24
+      },
+      "n_epitope_contacts": 9,
+      "n_total_contacts": 9,
+      "overall_min_dist": 1.03,
+      "n_severe_clash_pairs": 0
+    },
+    {
+      "name": "onepi_pd_6_dldesign_0",
+      "plddt": 0.873,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.44,
+        "272": 7.26,
+        "274": 10.85,
+        "294": 7.27,
+        "296": 4.21
+      },
+      "n_epitope_contacts": 9,
+      "n_total_contacts": 10,
+      "overall_min_dist": 0.676,
+      "n_severe_clash_pairs": 2
+    },
+    {
+      "name": "onepi_pd_27_dldesign_0",
+      "plddt": 0.872,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 1.03,
+        "272": 5.81,
+        "274": 6.93,
+        "294": 4.86,
+        "296": 1.87
+      },
+      "n_epitope_contacts": 9,
+      "n_total_contacts": 10,
+      "overall_min_dist": 0.442,
+      "n_severe_clash_pairs": 12
+    },
+    {
+      "name": "onepi_pd_13_dldesign_1",
+      "plddt": 0.861,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        269
+      ],
+      "hotspot_dists": {
+        "269": 2.34,
+        "272": 7.8,
+        "274": 10.84,
+        "294": 5.49,
+        "296": 1.43
+      },
+      "n_epitope_contacts": 9,
+      "n_total_contacts": 9,
+      "overall_min_dist": 0.686,
+      "n_severe_clash_pairs": 2
+    },
+    {
+      "name": "onepi_pd_3_dldesign_1",
+      "plddt": 0.893,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        274
+      ],
+      "hotspot_dists": {
+        "269": 16.93,
+        "272": 10.99,
+        "274": 3.49,
+        "294": 9.63,
+        "296": 16.48
+      },
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 8,
+      "overall_min_dist": 0.828,
+      "n_severe_clash_pairs": 2
+    },
+    {
+      "name": "onepi_pd_8_dldesign_1",
+      "plddt": 0.888,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        269
+      ],
+      "hotspot_dists": {
+        "269": 4.29,
+        "272": 7.06,
+        "274": 13.04,
+        "294": 5.35,
+        "296": 1.45
+      },
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 8,
+      "overall_min_dist": 0.735,
+      "n_severe_clash_pairs": 3
+    },
+    {
+      "name": "onepi_pd_4_dldesign_1",
+      "plddt": 0.88,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        294
+      ],
+      "hotspot_dists": {
+        "269": 0.62,
+        "272": 0.94,
+        "274": 0.83,
+        "294": 3.89,
+        "296": 0.7
+      },
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 10,
+      "overall_min_dist": 0.357,
+      "n_severe_clash_pairs": 45
+    },
+    {
+      "name": "onepi_pd_25_dldesign_0",
+      "plddt": 0.879,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.96,
+        "272": 0.87,
+        "274": 5.22,
+        "294": 5.27,
+        "296": 2.66
+      },
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.377,
+      "n_severe_clash_pairs": 22
+    },
+    {
+      "name": "onepi_pd_1_dldesign_0",
+      "plddt": 0.877,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        296
+      ],
+      "hotspot_dists": {
+        "269": 0.66,
+        "272": 0.46,
+        "274": 0.57,
+        "294": 9.1,
+        "296": 3.93
+      },
+      "n_epitope_contacts": 8,
+      "n_total_contacts": 10,
+      "overall_min_dist": 0.363,
+      "n_severe_clash_pairs": 38
+    },
+    {
+      "name": "onepi_pd_31_dldesign_0",
+      "plddt": 0.867,
+      "n_hotspot_contacts": 1,
+      "hotspots_engaged": [
+        294
+      ],
+      "hotspot_dists": {
+        "269": 0.33,
+        "272": 1.04,
+        "274": 5.97,
+        "294": 2.44,
+        "296": 0.3
+      },
+      "n_epitope_contacts": 5,
+      "n_total_contacts": 5,
+      "overall_min_dist": 0.296,
+      "n_severe_clash_pairs": 21
+    },
+    {
+      "name": "onepi_pd_0_dldesign_1",
+      "plddt": 0.878,
+      "n_hotspot_contacts": 0,
+      "hotspots_engaged": [],
+      "hotspot_dists": {
+        "269": 0.76,
+        "272": 0.28,
+        "274": 0.89,
+        "294": 6.52,
+        "296": 5.81
+      },
+      "n_epitope_contacts": 9,
+      "n_total_contacts": 12,
+      "overall_min_dist": 0.284,
+      "n_severe_clash_pairs": 39
+    },
+    {
+      "name": "onepi_pd_3_dldesign_0",
+      "plddt": 0.895,
+      "n_hotspot_contacts": 0,
+      "hotspots_engaged": [],
+      "hotspot_dists": {
+        "269": 17.11,
+        "272": 13.83,
+        "274": 6.75,
+        "294": 11.2,
+        "296": 14.71
+      },
+      "n_epitope_contacts": 3,
+      "n_total_contacts": 6,
+      "overall_min_dist": 0.372,
+      "n_severe_clash_pairs": 10
+    }
+  ]
+}

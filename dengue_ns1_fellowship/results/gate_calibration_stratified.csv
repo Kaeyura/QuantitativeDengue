@@ -1,0 +1,3 @@
+gate_outcome,n_predictions,mean_beta_ladder_contacts,spearman_rho_iptm_vs_contacts,p_value,n_total
+PASS,4,0.0,-0.888,9.70e-06,15
+fail,11,6.3,-0.888,9.70e-06,15

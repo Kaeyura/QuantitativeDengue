@@ -1,0 +1,6 @@
+design,binder_len,boltz_iptm,boltz_complex_plddt,boltz_complex_ipde_A_offtarget,hotspot_pae_min_A,rf2_interaction_pae_A,hotspots_engaged_le4.5A,nearest_hotspot_A,farthest_hotspot_A,epitope_contacts,primary_binding_region,gate_iptm>0.70,gate_plddt>0.80,gate_hotspot_pae<5.0,gate_hotspots>=3,PASSES_ALL
+d2_design_6_dldesign_1,117,0.8065,0.8853,4.8897,7.77,9.37,0,18.08,36.44,none,N-term(1-25),True,True,False,False,False
+d4_design_17_dldesign_0,118,0.6625,0.8709,8.7037,13.92,12.01,0,11.44,31.44,none,N-term(1-25),False,True,False,False,False
+d0_design_16_dldesign_3,120,0.6562,0.8778,5.7711,8.3,4.51,0,19.37,42.55,none,other,False,True,False,False,False
+d3_design_1_dldesign_2,117,0.476,0.8346,6.7757,10.74,11.92,0,17.74,41.49,none,other,False,True,False,False,False
+d1_design_17_dldesign_1,118,0.4474,0.86,8.4663,11.99,8.88,0,15.6,41.62,none,other,False,True,False,False,False

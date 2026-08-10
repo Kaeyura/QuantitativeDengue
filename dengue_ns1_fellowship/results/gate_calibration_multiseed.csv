@@ -1,0 +1,16 @@
+construct,role,seed,iptm,interface_pAE_A,complex_plddt,gate_pass,beta_ladder_contacts_MEASURED,clusterA_hotspots,binding_site_MEASURED,all_contacts_MEASURED
+nb_3 (design),design,1,0.6426,7.03,0.8777,fail,7,269,beta-ladder (ON-EPITOPE),28 92 93 269 270 281 299 303 304 305 324 325 326 327 328 346
+nb_3 (design),design,2,0.5153,9.15,0.8784,fail,6,,beta-ladder (ON-EPITOPE),28 93 94 95 270 281 301 303 304 305 307 326 327 328
+nb_3 (design),design,3,0.7778,3.43,0.9096,PASS,0,,N-terminus decoy,1 2 3 4 6 8 10 11 12 13 15 28 29 190 214 324
+nb_3 (design),design,4,0.7129,5.56,0.86,fail,0,,wing/connector (off-epitope),35 36 37 38 39 40 74 110 113 115 116 118 121 122 160 162 163 168
+nb_3 (design),design,5,0.7522,5.29,0.8928,fail,6,269,beta-ladder (ON-EPITOPE),269 281 299 303 304 305 306 324 325 326 327 328 346
+2B7 (crystal ref),validated protective Ab,1,0.4778,6.15,0.9428,fail,10,269,beta-ladder (ON-EPITOPE),269 270 281 282 299 301 302 303 304 305 307 325 326 327 328 330 343 344 345 346
+2B7 (crystal ref),validated protective Ab,2,0.4611,6.48,0.9441,fail,10,269,beta-ladder (ON-EPITOPE),269 270 281 282 299 301 302 303 304 305 307 325 326 327 328 330 343 345 346
+2B7 (crystal ref),validated protective Ab,3,0.444,6.56,0.9432,fail,10,269,beta-ladder (ON-EPITOPE),269 270 281 282 299 301 302 303 304 305 307 326 327 328 330 343 345 346
+2B7 (crystal ref),validated protective Ab,4,0.4616,6.48,0.9416,fail,10,269,beta-ladder (ON-EPITOPE),269 270 281 282 299 301 302 303 304 305 307 326 327 328 330 343 344 345 346
+2B7 (crystal ref),validated protective Ab,5,0.4546,6.48,0.9409,fail,10,269,beta-ladder (ON-EPITOPE),269 270 281 282 299 301 302 303 304 305 307 326 327 328 330 343 344 345 346
+cAb-Lys3 (NEGATIVE),non-cognate NEGATIVE,1,0.8813,2.23,0.8842,PASS,0,,N-terminus / dimer interface,1 2 3 4 5 6 8 14 184 185 186 187 188 189 228 229 230 231
+cAb-Lys3 (NEGATIVE),non-cognate NEGATIVE,2,0.8301,3.44,0.8516,PASS,0,,N-terminus / dimer interface,1 2 3 4 5 6 7 8 9 16 17 18 19 20 184 185 186 187 188 189 228 229 230 231
+cAb-Lys3 (NEGATIVE),non-cognate NEGATIVE,3,0.7661,5.05,0.8317,fail,0,,N-terminus / dimer interface,1 2 4 5 6 7 8 9 14 17 18 19 184 185 186 187 188 189 228 229 230 231
+cAb-Lys3 (NEGATIVE),non-cognate NEGATIVE,4,0.8225,3.58,0.8629,PASS,0,,N-terminus / dimer interface,1 2 4 5 6 7 8 14 16 17 18 20 185 186 187 188 189 228 229 230 231
+cAb-Lys3 (NEGATIVE),non-cognate NEGATIVE,5,0.6726,6.36,0.8583,fail,0,,N-terminus / dimer interface,1 2 4 5 6 7 8 14 18 20 184 185 186 187 188 189 190 228 229 230 231

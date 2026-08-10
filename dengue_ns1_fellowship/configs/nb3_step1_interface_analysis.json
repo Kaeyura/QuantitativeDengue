@@ -1,0 +1,269 @@
+{
+  "analysis": "nb_3 Step-1 interface characterization (5 MSA-backed Boltz-2 seeds)",
+  "numbering": "chain A = binder (1-118); chain B = NS1 (1-346), same numbering as manifest hotspots/epitope",
+  "target_epitope_beta_ladder": "261-305",
+  "avoid_tip_region": "311-352",
+  "hotspots": [
+    269,
+    272,
+    274,
+    294,
+    296
+  ],
+  "contact_cutoff_angstrom": 4.5,
+  "per_seed": {
+    "1": {
+      "iptm": 0.6426,
+      "n_ns1_contacts": 16,
+      "ns1_contacts": [
+        28,
+        92,
+        93,
+        269,
+        270,
+        281,
+        299,
+        303,
+        304,
+        305,
+        324,
+        325,
+        326,
+        327,
+        328,
+        346
+      ],
+      "epitope_261_305_contacts": [
+        269,
+        270,
+        281,
+        299,
+        303,
+        304,
+        305
+      ],
+      "tip_region_contacts_AVOID": [
+        324,
+        325,
+        326,
+        327,
+        328,
+        346
+      ],
+      "hotspot_hits": [
+        269
+      ],
+      "hotspot_min_dist_angstrom": {
+        "269": 4.0,
+        "272": 6.8,
+        "274": 6.4,
+        "294": 19.4,
+        "296": 13.1
+      },
+      "overall_interchain_pae_min": 9.27,
+      "overall_interchain_pae_median": 13.56,
+      "pae_at_epitope_contacts": {
+        "269": 9.8,
+        "270": 9.6,
+        "281": 10.5,
+        "299": 10.0,
+        "303": 10.6,
+        "304": 10.3,
+        "305": 10.2
+      }
+    },
+    "2": {
+      "iptm": 0.5153,
+      "n_ns1_contacts": 14,
+      "ns1_contacts": [
+        28,
+        93,
+        94,
+        95,
+        270,
+        281,
+        301,
+        303,
+        304,
+        305,
+        307,
+        326,
+        327,
+        328
+      ],
+      "epitope_261_305_contacts": [
+        270,
+        281,
+        301,
+        303,
+        304,
+        305
+      ],
+      "tip_region_contacts_AVOID": [
+        326,
+        327,
+        328
+      ],
+      "hotspot_hits": [],
+      "hotspot_min_dist_angstrom": {
+        "269": 5.2,
+        "272": 5.0,
+        "274": 6.1,
+        "294": 19.6,
+        "296": 12.5
+      },
+      "overall_interchain_pae_min": 12.85,
+      "overall_interchain_pae_median": 17.88,
+      "pae_at_epitope_contacts": {
+        "270": 13.0,
+        "281": 14.4,
+        "301": 14.5,
+        "303": 14.0,
+        "304": 13.8,
+        "305": 14.3
+      }
+    },
+    "3": {
+      "iptm": 0.7778,
+      "n_ns1_contacts": 16,
+      "ns1_contacts": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        28,
+        29,
+        190,
+        214,
+        324
+      ],
+      "epitope_261_305_contacts": [],
+      "tip_region_contacts_AVOID": [
+        324
+      ],
+      "hotspot_hits": [],
+      "hotspot_min_dist_angstrom": {
+        "269": 20.0,
+        "272": 12.8,
+        "274": 6.3,
+        "294": 23.7,
+        "296": 22.3
+      },
+      "overall_interchain_pae_min": 2.87,
+      "overall_interchain_pae_median": 9.13,
+      "pae_at_epitope_contacts": {}
+    },
+    "4": {
+      "iptm": 0.7129,
+      "n_ns1_contacts": 18,
+      "ns1_contacts": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        74,
+        110,
+        113,
+        115,
+        116,
+        118,
+        121,
+        122,
+        160,
+        162,
+        163,
+        168
+      ],
+      "epitope_261_305_contacts": [],
+      "tip_region_contacts_AVOID": [],
+      "hotspot_hits": [],
+      "hotspot_min_dist_angstrom": {
+        "269": 30.2,
+        "272": 19.0,
+        "274": 26.4,
+        "294": 43.6,
+        "296": 42.8
+      },
+      "overall_interchain_pae_min": 5.99,
+      "overall_interchain_pae_median": 11.4,
+      "pae_at_epitope_contacts": {}
+    },
+    "5": {
+      "iptm": 0.7522,
+      "n_ns1_contacts": 13,
+      "ns1_contacts": [
+        269,
+        281,
+        299,
+        303,
+        304,
+        305,
+        306,
+        324,
+        325,
+        326,
+        327,
+        328,
+        346
+      ],
+      "epitope_261_305_contacts": [
+        269,
+        281,
+        299,
+        303,
+        304,
+        305
+      ],
+      "tip_region_contacts_AVOID": [
+        324,
+        325,
+        326,
+        327,
+        328,
+        346
+      ],
+      "hotspot_hits": [
+        269
+      ],
+      "hotspot_min_dist_angstrom": {
+        "269": 3.9,
+        "272": 7.5,
+        "274": 7.7,
+        "294": 19.0,
+        "296": 12.2
+      },
+      "overall_interchain_pae_min": 6.01,
+      "overall_interchain_pae_median": 10.22,
+      "pae_at_epitope_contacts": {
+        "269": 6.6,
+        "281": 7.2,
+        "299": 6.6,
+        "303": 7.2,
+        "304": 6.7,
+        "305": 6.8
+      }
+    }
+  },
+  "verdict": {
+    "epitope_binders": [
+      1,
+      5
+    ],
+    "off_epitope_high_iptm": [
+      3,
+      4
+    ],
+    "key_problem": "ipTM ranking is inverted vs epitope fidelity. Seed 3 (highest ipTM 0.778) binds off-epitope (NS1 N-terminus 1-15); its hotspot min-distances span 6.3-23.7 A (nearest is residue 274 at 6.3 A, still well above the 4.5 A contact cutoff). Best on-target pose is seed 5 (ipTM 0.752), engaging hotspot 269 + epitope residues 281/299/303-305, with the lowest on-target interface PAE (6.6-7.2 A).",
+    "threshold_status": "NO seed passes all locked thresholds. Best on-target seed 5: ipTM 0.752 PASS(>0.70), pLDDT 0.893 PASS(>0.80), BUT interface PAE 6.6A at hotspot 269 FAILS(<5.0A), and only 1/5 hotspots engaged FAILS(>=3).",
+    "implication_for_step2": "Refinement must (a) lock the pose to the epitope so seeds stop wandering to off-target/N-term/tip surfaces, and (b) recruit hotspots 272/274/294/296, which in the best on-target pose (seed 5) sit at 272:7.5, 274:7.7, 294:19.0, 296:12.2 A - all beyond the 4.5 A contact cutoff. Seed 5 is the correct scaffold to seed from, NOT seed 3."
+  }
+}

@@ -1,0 +1,4 @@
+construct,format,role,iptm,interface_pAE_A,complex_plddt,ptm,gate_iptm_gt_0.7,gate_ipae_lt_5,gate_plddt_gt_0.8,beta_ladder_contacts,n_ns1_contacts
+"nb_3 (design, seed 5)",VHH 118aa,design,0.7522,5.29,0.8928,0.8885,PASS,FAIL,PASS,269;281;299;303;304;305,13
+2B7 Fab (PDB 6WER),Fab H+L,validated protective Ab,0.4546,6.48,0.9409,0.5771,FAIL,FAIL,PASS,269;270;281;282;299;301;302;303;304;305,19
+cAb-Lys3 (1MEL),VHH 148aa,non-cognate NEGATIVE,0.6726,6.36,0.8583,0.8359,FAIL,FAIL,PASS,NONE,21

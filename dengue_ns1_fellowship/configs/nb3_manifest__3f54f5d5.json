@@ -1,0 +1,51 @@
+{
+  "design_id": "NS1_betaladder__nb_3_dldesign_0",
+  "origin": "RFantibody nanobody design, NS1 Direction-B beta-ladder pilot",
+  "binder_sequence": "QVQLVESGGGLVQPGGSLRLSCAASGGDLSQYSLGWFRQAPGQGLEAVAAISADGKKTYYADSVKGRFTISRDNSKNTLYLQMNSLRAEDTAVYYCAARDPRTGIWRYWGQGTLVTVS",
+  "binder_length": 118,
+  "target": "NS1 full-length (346 aa)",
+  "target_sequence": "DSGCVVSWKNKELKCGSGIFITDNVHTWTEQYKFQPESPSKLASAIQKAHEEGICGIRSVTRLENLMWKQITPELNHILTENEVKLTIMTGDIKGIMQAGKRSLRPQPTELKYSWKAWGKAKMLSTELHNHTFLIDGPETAECPNTNRAWNSLEVEDYGFGVFTTNIWLKLKERQDVFCDSKLMSAAIKDNRAVHADMGYWIESALNDTWKIEKASFIEVKSCHWPKSHTLWSNGVLESEMIIPKNFAGPVSQHNYRPGYHTQTAGPWHLGRLEMDFDFCEGTTVVVTEDCGNRGPSLRTTTASGKLITEWCCRSCTLPPLRYRGEDGCWYGMEIRPLKEKEENLV",
+  "framework": "VHH nanobody (QVQLVESGGG...)",
+  "validated_boltz_metrics": {
+    "ipTM_mini_target": 0.593,
+    "ipTM_fulllen_noMSA": 0.702,
+    "ipTM_fulllen_MSA": 0.553,
+    "complex_plddt_MSA": 0.874,
+    "confidence_MSA": 0.809
+  },
+  "binding_mode": "STABLE across no-MSA/MSA (10 shared contacts), epitope-REGION (261-305)",
+  "hotspot_engagement": {
+    "hotspots": [
+      269,
+      272,
+      274,
+      294,
+      296
+    ],
+    "noMSA_hits": [
+      269,
+      272
+    ],
+    "MSA_hits": [],
+    "note": "hotspot contacts only in weaker no-MSA condition; MSA condition is epitope-region but off-hotspot"
+  },
+  "acceptance_vs_locked_thresholds": {
+    "pLDDT>0.80": "PASS (0.874)",
+    "ipTM>0.70": "FAIL (0.553 MSA)",
+    "hotspot_engagement": "FAIL (none under MSA)"
+  },
+  "boltz_run_settings": {
+    "version": "boltz 2.2.1",
+    "recycling_steps": 3,
+    "diffusion_samples": 1,
+    "kernels": "--no_kernels",
+    "cache": "/workspace/boltz_cache",
+    "note": "diffusion_samples=1 only; replicate 3-5x for ipTM spread before treating as a lead"
+  },
+  "remote_paths_on_ssh_junkgpu": {
+    "fulllen_noMSA_run": "/workspace/cs_scratch/boltz_bl_fulllen/",
+    "fulllen_MSA_run": "/workspace/cs_scratch/boltz_bl_msa/",
+    "predicted_complex_pdb_MSA": "see artifact nb3_dldesign_0_complex_MSA.pdb",
+    "note": "Pod /workspace/cs_scratch is ephemeral and was recycled; the artifact PDBs saved here are the authoritative copies."
+  }
+}

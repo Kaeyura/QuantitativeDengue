@@ -1,0 +1,4 @@
+construct,role,mean_iptm,sd_iptm,mean_interface_pAE_A,sd_interface_pAE_A,seeds_passing_gate,seeds_on_epitope,n_seeds
+nb_3 (design),design,0.68,0.105,6.092,2.136,1,3,5
+2B7 (crystal ref),validated protective Ab,0.46,0.012,6.431,0.158,0,5,5
+cAb-Lys3 (NEGATIVE),non-cognate NEGATIVE,0.795,0.079,4.134,1.598,3,0,5

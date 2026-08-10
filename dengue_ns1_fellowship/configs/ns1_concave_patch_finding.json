@@ -1,0 +1,62 @@
+{
+  "analysis": "Grid-based cavity/concavity search (LIGSITE-style) on DENV NS1 to find conserved concave sites not prioritized by prior flat-patch / wing passes",
+  "structures_used": {
+    "monomer": "target_9W22_chainA (DENV, mature NS1 1-346)",
+    "dimer": "target_9W22_dimer",
+    "hexamer": "denv2_hexamer_built (secreted-form exposure)"
+  },
+  "key_result": "NS1 has NO deep buried druggable-style pocket (largest all-directions-enclosed cavity = 6 grid cells). It is a flat, elongated beta-sheet sandwich. Confirms it is intrinsically a hard de novo target.",
+  "candidate_patch": {
+    "name": "connector/domain-I concave patch",
+    "residues": [
+      61,
+      62,
+      63,
+      154,
+      180,
+      183,
+      198,
+      218
+    ],
+    "identities": {
+      "61": "T",
+      "62": "R",
+      "63": "L",
+      "154": "E",
+      "180": "D",
+      "183": "L",
+      "198": "M",
+      "218": "I"
+    },
+    "n_identical_all4": 7,
+    "n_res": 8,
+    "mean_conservation": 0.97,
+    "mean_relSASA_hexamer": 0.2,
+    "exposed_in_secreted_hexamer": true,
+    "concavity_atoms_within_10A": 158.8,
+    "comparison": {
+      "this": 158.8,
+      "betaladder_P1_flat": 135.6,
+      "betaladder_P2_flat": 100.5,
+      "wing_DirA": 88.9
+    },
+    "per_serotype": {
+      "61": "TTTT",
+      "62": "RRRR",
+      "63": "LLML",
+      "154": "EEEE",
+      "180": "DDDD",
+      "183": "LLLL",
+      "198": "MMMM",
+      "218": "IIII"
+    }
+  },
+  "caveats": [
+    "Discontinuous in sequence (61-63 / 154 / 180-183 / 198 / 218) - conformational epitope, only valid on folded NS1; will not present on denatured antigen.",
+    "Only mildly concave (2.4 A deep) - better than the flat beta-ladder but NOT a deep pocket. A meaningful but modest geometric improvement.",
+    "relSASA ~0.20 is exposed but not highly so - some lining residues (e.g. 187-189) bury on assembly; the 8-residue set is the assembly-stable subset.",
+    "Region overlaps domain-I/connector, NOT the pre-locked Direction B beta-ladder epitope. Would be a NEW epitope direction ('Direction C'), needs its own DENV1-4 interface verification and Zika/flavivirus cross-reactivity check before adoption.",
+    "Concavity computed on a single static DENV structure; not validated against conformational flexibility."
+  ],
+  "recommendation": "Worth a small exploratory RFantibody/binder pilot as a 3rd epitope direction, treated as STRETCH. Does not displace the locked Direction B primary. Verify pan-serotype interface + flavivirus cross-reactivity first."
+}

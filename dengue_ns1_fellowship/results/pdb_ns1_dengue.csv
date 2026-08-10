@@ -1,0 +1,22 @@
+PDB,serotype,method,reso_A,oligomer,chains,construct,unp,title
+4OIG,DENV-1,X-RAY DIFFRACTION,2.69,dimeric,2,185,P17763,Dengue Virus Non-structural Protein NS1
+6WEQ,DENV-1,X-RAY DIFFRACTION,3.2,hexameric,6,376,Q9J7C6,DENV1 NS1 in complex with neutralizing 2B7 Fab fragment
+7BSC,DENV-2,X-RAY DIFFRACTION,2.31,trimeric,3,181,Q6TFL7,Complex structure of 1G5.3 Fab bound to DENV2 NS1c
+7K93,DENV-2,X-RAY DIFFRACTION,2.89,tetrameric,4,376,P29990,DENV2 NS1 in complex with neutralizing 2B7 single chain
+4O6B,DENV-2,X-RAY DIFFRACTION,3.0005,dimeric,2,376,P29990,Dengue Type2 Virus Non-structural protein 1 (NS1) Form 
+9W22,DENV-2,ELECTRON MICROSCOPY,3.12,dimeric,2,358,H9M645,DENV2 non-structural protein 1 (NS1) Dimer
+9W23,DENV-2,ELECTRON MICROSCOPY,3.12,tetrameric,4,358,H9M645,DENV2 non-structural protein 1 (NS1) Stable Tetramer co
+9W1Z,DENV-2,ELECTRON MICROSCOPY,3.14,tetrameric,4,358,H9M645,DENV2 non-structural protein 1 (NS1) Stable Tetramer Co
+9W20,DENV-2,ELECTRON MICROSCOPY,3.63,tetrameric,4,358,H9M645,DENV2 non-structural protein 1 (NS1) Stable Tetramer Co
+9W24,DENV-2,ELECTRON MICROSCOPY,3.8,tetrameric,4,602,P42212,DENV2 non-structural protein 1 (NS1) with C-terminal mV
+6WER,DENV-2,X-RAY DIFFRACTION,3.96,hexameric,6,376,P29990,DENV2 NS1 in complex with neutralizing 2B7 Fab fragment
+9W1X,DENV-2,ELECTRON MICROSCOPY,4.6,tetrameric,4,358,H9M645,DENV2 non-structural protein 1 (NS1) Loose Tetramer Con
+9W21,DENV-2,ELECTRON MICROSCOPY,4.7,tetrameric,4,358,H9M645,DENV2 non-structural protein 1 (NS1) Loose Tetramer Con
+9W25,DENV-2,ELECTRON MICROSCOPY,5.3,tetrameric,4,602,P42212,DENV2 non-structural protein 1 (NS1) with C-terminal mV
+9W1Y,DENV-2,ELECTRON MICROSCOPY,6.1,tetrameric,4,602,P42212,DENV2 non-structural protein 1 (NS1) with C-terminal mV
+8WBB,DENV-4,ELECTRON MICROSCOPY,2.9,dimeric,2,358,Q58HT7,CryoEM structure of non-structural protein 1 dimer from
+8WBD,DENV-4,ELECTRON MICROSCOPY,2.9,hexameric,6,358,Q58HT7,CryoEM structure of non-structural protein 1 hexamer 1 
+8WBF,DENV-4,ELECTRON MICROSCOPY,2.99,tetrameric,4,393,A0A146CJG7,CryoEM structure of non-structural protein 1 tetramer f
+8WBE,DENV-4,ELECTRON MICROSCOPY,3.0,hexameric,6,358,Q58HT7,CryoEM structure of non-structural protein 1 hexamer 2 
+8WBC,DENV-4,ELECTRON MICROSCOPY,3.03,tetrameric,4,358,Q58HT7,CryoEM structure of non-structural protein 1 tetramer f
+8WBG,DENV-4,ELECTRON MICROSCOPY,3.2,tetrameric,4,393,A0A146CJG7,CryoEM structure of non-structural protein 1 tetramer f

@@ -1,0 +1,14 @@
+criterion,nb_3 result,reference / threshold,verdict,basis
+Binds the intended epitope,3 of 5 seeds on beta-ladder,2B7: 5/5; decoy: 0/5,PARTIAL,"measured contacts, 15 predictions"
+Consensus epitope across on-epitope seeds,"7 residues: 281,303,304,305,326,327,328",-,PASS,"intersection of seeds 1,2,5"
+Consensus epitope inside a protective Ab's epitope,7 of 7,2B7 crystal epitope (6WER),PASS,computed
+Engages a conserved cluster-A hotspot,269 in seeds 1 and 5,269 conserved DENV1-4,PARTIAL,measured
+Epitope burial,356 A2,2B7: 320 A2 (exceeds it),PASS,FreeSASA
+Forbidden-tip contact,"326,327,328",subset of 2B7's validated tip set,PASS,computed
+Tip burial vs proposed <=40 A2 limit,not separately quantified for the 5-seed poses,<=40 A2 proposed,UNTESTED,gap
+ipTM > 0.70 (original gate),1 of 5 seeds,2B7: 0/5; decoy: 3/5,GATE INVALID,rho=-0.888 vs epitope
+interface pAE < 5.0 A (original gate),1 of 5 seeds,2B7: 0/5,GATE INVALID,same
+pLDDT > 80,5 of 5,non-discriminating (decoy also passes),PASS (uninformative),measured
+Reproducible pose,3 of 5 seeds; 2 distinct decoy sites,"2B7: 5/5, sd(ipTM)=0.012",FAIL,measured
+Experimental affinity,none,out of project scope,NOT ATTEMPTED,-
+Pan-serotype interface,"269,299,305 conserved; 281,303,304 variable",4 of 7 conserved,PARTIAL,DENV1-4 alignment
