@@ -1,3 +1,0 @@
-RFdiffusion_seconds 272
-ProteinMPNN_seconds 165
-AlphaFold2_seconds 228
