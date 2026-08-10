@@ -1,0 +1,60 @@
+
+═══════════════════════════════════════════════════════════════════════════════
+PATCH SELECTION ANALYSIS — DENGUE NS1 BINDER DESIGN
+═══════════════════════════════════════════════════════════════════════════════
+
+TARGET STRUCTURE: 9W22 (dengue NS1, 346 residues)
+β-LADDER CORE: residues 261–300 (primary bindable surface)
+AVOID ZONE: residues 311–352 (host mimicry / false-positive risk)
+
+───────────────────────────────────────────────────────────────────────────────
+PATCH P1 (PRIMARY — Charged/Polar-Heavy)
+───────────────────────────────────────────────────────────────────────────────
+Residues:           269(H), 272(R), 274(E), 294(R), 296(P)
+Mean hydrophobicity: -3.46  (highly charged/polar)
+Mean rel.SASA:       1.91   (moderately exposed)
+Description:        Electrostatic-rich surface, can be challenging for small
+                    de novo binders to achieve high-affinity interactions due
+                    to entropy cost of desolvation and difficulty forming
+                    stable hydrophobic packing core.
+
+───────────────────────────────────────────────────────────────────────────────
+PATCH P2 (CONTRAST — Hydrophobic-Leaning)
+───────────────────────────────────────────────────────────────────────────────
+Residues:           282(G), 284(T), 286(V), 289(E)
+Mean hydrophobicity: -0.10  (mixed, but includes V286 +4.2 aliphatic core)
+Mean rel.SASA:       1.01   (more protected)
+Difference vs P1:   +3.36 units (P2 is meaningfully more hydrophobic)
+
+Description:        P2 features valine (286), a strongly hydrophobic residue,
+                    flanked by smaller/polar residues. This creates a discrete
+                    hydrophobic anchor point that may be easier for a small
+                    de novo binder to recognize and grip. The contrast is
+                    significant (Δhydro = +3.36).
+
+───────────────────────────────────────────────────────────────────────────────
+RECOMMENDATION: PROCEED WITH P2 AS CONTRAST PATCH
+───────────────────────────────────────────────────────────────────────────────
+
+✓ P2 is meaningfully more hydrophobic than P1 (hydrophobicity +3.36 higher).
+✓ P2 is contiguous and resides fully within the β-ladder core (261–300).
+✓ P2 offers a genuine design contrast: charged vs. hydrophobic character.
+
+RATIONALE:
+  • If P1 produces near-zero ipTM>0.7 hits while P2 produces substantive hits,
+    this indicates P1's charged character is genuinely hard to bind (not sample
+    size), validating the empirical observation that electrostatic-heavy
+    patches are lower-affinity. The target itself is sound; P1 is hard.
+  • If both patches produce near-zero hits at n=100, that suggests either:
+    (a) the NS1 surface is genuinely a poor binder target, or
+    (b) the RFdiffusion/MPNN/AF2 pipeline is not capturing the design well.
+    This would warrant rethinking the approach before scaling further.
+
+───────────────────────────────────────────────────────────────────────────────
+PROCEEDING WITH DESIGN:
+  Batch A: P1 (269, 272, 274, 294, 296)
+  Batch B: P2 (282, 284, 286, 289)
+  
+Both batches will have position 272 edited to lysine (K) to match the
+pan-serotype consensus before design begins.
+═══════════════════════════════════════════════════════════════════════════════

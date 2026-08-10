@@ -1,0 +1,51 @@
+{
+  "step": "2+3_merged",
+  "description": "Hotspot-steered de-novo nanobody generation against NS1 beta-ladder (RFantibody native flow)",
+  "target_complex": "NS1 full-length (346 aa), renamed to chain T for HLT format, native numbering 1-346",
+  "hotspots_to_steer": {
+    "description": "NS1 residues to engage via interface refinement",
+    "residue_numbers": [
+      269,
+      272,
+      274
+    ],
+    "rationale": "269 already engaged (3.9 \u00c5); 272 & 274 nearest unengaged (7.5\u20137.7 \u00c5), refinable to contact. Excluded: 296 (12.2 \u00c5) and 294 (19.0 \u00c5) \u2014 both farther than the selected trio; 294 in particular would require a major loop rearrangement.",
+    "all_hotspot_min_dist_seed5_angstrom": {
+      "269": 3.9,
+      "272": 7.5,
+      "274": 7.7,
+      "296": 12.2,
+      "294": 19.0
+    },
+    "hotspot_chain_prefix": "T (target chain in HLT)",
+    "rfdiffusion_hotspot_string": "T269,T272,T274"
+  },
+  "rfdiffusion_params": {
+    "num_designs": 30,
+    "design_loops": "H1:7,H2:6,H3:5-13",
+    "hotspots": "T269,T272,T274",
+    "diffuser_t": 50,
+    "deterministic": true
+  },
+  "selection_criteria": {
+    "ipTM": ">0.68",
+    "pLDDT": ">0.80",
+    "interface_pae": "<5.0 at hotspot contacts",
+    "hotspot_engagement": "\u22652 of {269, 272, 274}"
+  },
+  "boltz_validation": {
+    "mode": "MSA-backed full-length",
+    "recycling_steps": 3,
+    "cache": "/workspace/boltz_cache"
+  },
+  "approach_note": "Original plan was seed-5 partial diffusion, but that requires Chothia renumbering (ANARCI) to build an HLT framework, and ANARCI is not installed in the pinned env. Pivoted to de-novo generation from the standard HLT framework h-NbBCII10, steered to the same missing-anchor hotspot set. This gives up literal reuse of seed 5's backbone coordinates but directly tests whether explicit steering recruits the anchors seed 5 missed.",
+  "seed_5_context": "Seed 5 (ipTM 0.752, on-epitope, engages hotspot 269 at 3.9 \u00c5) is the evidence that the beta-ladder is engageable and defines which hotspots to steer toward; its coordinates are NOT used as the diffusion scaffold.",
+  "framework": "h-NbBCII10 (standard HLT nanobody, chain H, CDR-annotated)",
+  "downstream": {
+    "proteinmpnn": "4 seqs/design, temp 0.2 (~120 designs)",
+    "rf2": "in-pipeline scoring, 10 recycles",
+    "boltz_validation": "MSA-backed full-length, follow-up job on top designs"
+  },
+  "submitted_job_id": "ccd3e6f6-02e3-41d4-86f0-73eb2a26b61d",
+  "job_status": "stopped by user mid-run before completion"
+}

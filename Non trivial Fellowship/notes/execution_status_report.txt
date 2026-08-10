@@ -1,0 +1,116 @@
+================================================================================
+DENGUE NS1 BINDER DESIGN — EXECUTION STATUS REPORT
+================================================================================
+
+UPDATED: 2026-07-17 ~17:30 UTC
+SESSION: 4f3cb923-86bd-48c1-b73d-0ecf356ed1e3
+COMPUTE: ssh:junkgpu (RunPod NVIDIA A40, 46 GB VRAM) — single GPU, sequential
+
+--------------------------------------------------------------------------------
+CURRENT STATE
+--------------------------------------------------------------------------------
+
+P1 (charged/polar; hotspot A269,A272,A274,A294,A296) — COMPLETE
+  Job:       ca794bc1-70bc-4d36-8328-8fb4b8c3146a (corrected resume, chain B designed)
+             [orig 3853ccd3 produced valid backbones but buggy MPNN — see BUG #8]
+  RESULT:    0 / 200 pass (ipTM max 0.110, binder pLDDT max 83, interface pAE min 27.8)
+             -> no confident binder-NS1 interface at the charged patch.
+  Artifacts: P1_results.csv, P1_distributions.png
+
+P2 (hydrophobic; hotspot A282,A284,A286,A289) — RUNNING
+  Job:       984597c0-23a9-4d6b-8a59-c877fe0b3ac9 (full corrected patch_pipeline.sh)
+  STATUS:    Stage 1 (RFdiffusion) in progress; MPNN + ColabFold to follow.
+  Awaiting P2 before the P1-vs-P2 contrast conclusion.
+
+--------------------------------------------------------------------------------
+PIPELINE (per patch, as actually implemented in patch_pipeline.sh)
+--------------------------------------------------------------------------------
+
+STAGE 1 — RFdiffusion (classic, Hydra CLI)
+  target:  9W22_K272_monomer.pdb (single chain A, 346 res, K272)
+  contig:  [A1-346/0 75-75]  (NS1 fixed motif + 75-res diffused binder)
+  output:  100 backbone PDBs (chain A = NS1 target, chain B = binder)
+  timing:  ~3.5 min/backbone -> ~6 h for 100
+
+STAGE 2 — ProteinMPNN (GPU)
+  parse_multiple_chains.py -> assign_fixed_chains.py (chain A fixed)
+  protein_mpnn_run.py --num_seq_per_target 2 --sampling_temp 0.1
+  output:  2 sequences/backbone = 200 sequences/patch
+  timing:  ~3 min
+
+STAGE 3 — ColabFold AF2-multimer
+  FASTA:   designed binder (chain B) + NS1 (chain A), ':'-joined multimer
+  mode:    --msa-mode single_sequence --num-recycle 3 --num-models 1
+  output:  per-complex PDB + *_scores.json (pLDDT, ipTM, pAE)
+  timing:  ~180 s/complex x 200 -> ~10 h
+
+PER-PATCH TOTAL: ~16 h. BOTH PATCHES (sequential): ~31 h.
+
+--------------------------------------------------------------------------------
+ACCEPTANCE THRESHOLDS (locked)
+--------------------------------------------------------------------------------
+  pLDDT > 80   |   ipTM > 0.7   |   interface pAE < 5 A
+
+--------------------------------------------------------------------------------
+PRIOR WORK COMPLETED
+--------------------------------------------------------------------------------
+  [x] Patch analysis: P1 (charged, hydro -3.46) vs P2 (hydrophobic, -0.10, D+3.36)
+  [x] Structure edit: 9W22 pos 272 R->K (pan-serotype consensus)
+  [x] Clean single-chain K272 monomer target extracted + verified
+  [x] RFdiffusion smoke test (2 designs) succeeded on GPU — command validated
+  [x] All 7 earlier pipeline bugs diagnosed and fixed (see below)
+
+--------------------------------------------------------------------------------
+EARLIER BUGS — ALL FIXED & VERIFIED
+--------------------------------------------------------------------------------
+  1. RFd argparse flags  -> Hydra syntax (inference.input_pdb=, ppi.hotspot_res=[])
+  2. K272 edit only on chain 'a' -> extracted correct edited monomer
+  3. 2-chain homodimer target -> single-chain monomer for binder design
+  4. Hardcoded /workspace path -> staged input referenced from job workdir
+  5. ColabFold stage commented out -> now builds real FASTA + runs colabfold_batch
+  6. MPNN timing off ~60x -> corrected (~3 min for 200 seqs)
+  7. Missing MPNN parse/assign steps -> added
+
+--------------------------------------------------------------------------------
+NOTE ON FAILED JOBS (superseded)
+--------------------------------------------------------------------------------
+  Jobs 7007623b, fa71ba87, 843e38a6, dfb59e59, d99b76d0, 1626af06, 499d69c3
+  all FAILED (exit 2/127) on the bugs above BEFORE any GPU work — none produced
+  backbones. Superseded by the verified patch_pipeline.sh run now in progress.
+
+--------------------------------------------------------------------------------
+NEXT
+--------------------------------------------------------------------------------
+  [done] P1 parsed: 0/200 pass (results saved).
+  [now]  P2 (job 984597c0) running — RFdiffusion Stage 1 in progress.
+  1. When P2 finishes: parse scores, compare P1 vs P2 distributions/top designs.
+  2. CAVEAT on both: ColabFold single_sequence, no template, gives interface
+     pAE floored at ~28 A (non-interacting) — the classic signature of the
+     WRONG validation method for RFdiffusion binders, not necessarily bad
+     designs. This build has --initial-guess + --custom-template-path.
+  3. Re-validate BOTH patches with AF2 initial-guess (template on the RFd
+     backbone) reusing existing 200 backbones+seqs each — no re-design. This
+     is the field-standard RFd binder validation; likely to change pass rates.
+  4. Only if initial-guess still ~0: diagnose designs (interface SC/BSA on RFd
+     complexes, MPNN score dist), then adjust generation (hotspots, binder
+     length sweep, more backbones) or pivot to Direction A (wing loop).
+  -> P1's 0/200 is PROVISIONAL until initial-guess re-validation.
+================================================================================
+
+--------------------------------------------------------------------------------
+BUG #8 (caught during P1 harvest) — MPNN designed the wrong chain
+--------------------------------------------------------------------------------
+  Symptom: P1 first AF2 pass gave uniformly dead scores (ipTM mean 0.107 /
+  max 0.120, binder pLDDT mean ~26, interface pAE mean ~30 across all 200
+  designs — all far below thresholds, tightly clustered near the floor).
+  Cause:   assign_fixed_chains.py --chain_list specifies chains to DESIGN, not
+           fix. Script passed "A" -> MPNN redesigned the NS1 target (chain A)
+           and FIXED the binder (chain B). AF2 then folded NS1+NS1 (693 aa),
+           not binder+NS1.
+  Fix:     --chain_list "B" (design binder, fix NS1). Verified: MPNN header now
+           fixed_chains=['A'], designed_chains=['B']; FASTA binder=75, ns1=346.
+  Cost:    RFdiffusion backbones (100, ~5h) were VALID and reused; only the
+           fast Stages 2-3 (~10h AF2) re-run. P2 original cancelled at 0
+           backbones before waste; P2 runs corrected script from scratch.
+  Jobs:    P1 corrected resume = ca794bc1-70bc-4d36-8328-8fb4b8c3146a
+================================================================================

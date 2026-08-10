@@ -1,0 +1,145 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║           DENGUE NS1 BINDER DESIGN — BATCH EXECUTION SUMMARY                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+SUBMISSION DATE: 2026-07-17 16:38 UTC
+REMOTE JOB ID: 7007623b-8713-433d-ba75-598c1918e7c5
+COMPUTE TARGET: ssh:junkgpu (RunPod A40, 46 GB VRAM)
+TIMEOUT: 12 hours
+
+═══════════════════════════════════════════════════════════════════════════════
+DESIGN CONFIGURATION
+═══════════════════════════════════════════════════════════════════════════════
+
+TARGET STRUCTURE:        9W22 (dengue NS1, 346 residues)
+POSITION 272 EDIT:       R → K (pan-serotype consensus)
+BINDER LENGTH:           75 residues
+NUM DESIGNS PER PATCH:   100
+NUM SEQS PER BACKBONE:   2
+TOTAL SEQUENCES/PATCH:   200 (100 backbones × 2 seqs)
+
+BATCH A (P1 — CHARGED/POLAR):
+  Residues:     269(H), 272(K), 274(E), 294(R), 296(P)
+  Hydro:        −3.46 (electrostatic-rich, harder to bind)
+  Surface:      Moderately exposed (rel.SASA 1.91)
+  Theory:       May be difficult for small binders (desolvation entropy cost)
+
+BATCH B (P2 — HYDROPHOBIC CONTRAST):
+  Residues:     282(G), 284(T), 286(V), 289(E)
+  Hydro:        −0.10 (includes V286 +4.2 aliphatic core)
+  Surface:      More protected (rel.SASA 1.01)
+  Difference:   +3.36 hydrophobicity units vs P1
+  Theory:       May be easier to bind (discrete hydrophobic anchor)
+
+═══════════════════════════════════════════════════════════════════════════════
+PIPELINE STEPS (Running Now)
+═══════════════════════════════════════════════════════════════════════════════
+
+STEP 1: RFDIFFUSION (Backbone Design)
+  ├─ Input:    9W22_K272.pdb + hotspot residues
+  ├─ Output:   100 backbone PDB files per patch
+  ├─ Time:     ~213 s/backbone on A40 (single GPU) → ~6 hrs total
+  └─ Status:   Running
+
+STEP 2: ProteinMPNN (Sequence Design)
+  ├─ Input:    RFdiffusion backbones
+  ├─ Output:   2 sequences per backbone (200 sequences/patch)
+  ├─ GPU:      Confirmed torch 2.5.1+cu121 (GPU-enabled, not CPU-fallback)
+  ├─ Time:     ~0.9 s/seq on A40 → ~3 hrs total
+  └─ Status:   Queued
+
+STEP 3: ColabFold AF2-multimer (Validation)
+  ├─ Input:    Binder sequences + NS1 (346 aa) as multimer
+  ├─ Output:   pLDDT, ipTM, pAE for each complex
+  ├─ Mode:     single_sequence MSA (no internet MSA search)
+  ├─ Time:     ~180 s/complex on A40 → ~9–10 hrs total
+  └─ Status:   Queued
+
+═══════════════════════════════════════════════════════════════════════════════
+SCORING & FILTERING
+═══════════════════════════════════════════════════════════════════════════════
+
+ACCEPTANCE THRESHOLDS:
+  • pLDDT (binder confidence):       > 80
+  • ipTM (interface quality):        > 0.7
+  • Interface pAE (interface error): < 5 Å
+
+PASS DEFINITION:
+  A design "passes" if ALL three thresholds are met.
+
+EXPECTED OUTPUT PER BATCH:
+  ✓ Total designs:              200 (100 backbones × 2 seqs)
+  ✓ Pass count:                 (TBD — depends on bindability)
+  ✓ Pass rate:                  (TBD)
+  ✓ Mean pLDDT:                 (distribution reported)
+  ✓ Mean ipTM:                  (distribution reported)
+  ✓ Mean interface pAE:         (distribution reported)
+  ✓ Top 5 designs:              (ranked by ipTM)
+
+═══════════════════════════════════════════════════════════════════════════════
+INTERPRETATION FRAMEWORK
+═══════════════════════════════════════════════════════════════════════════════
+
+Scenario A: P2 >> P1 (e.g., P2: 20 passing, P1: 0 passing)
+  → Conclusion: P1 is genuinely hard to bind due to charged character
+  → Target is sound; the electrostatic patch is the limiting factor
+  → Recommendation: Investigate P1 binders further or focus on P2
+
+Scenario B: Both near-zero at n=100 (both: 0–2 passing)
+  → Conclusion: Either NS1 is a poor binder target, OR the RFd/MPNN/AF2
+    pipeline is not capturing valid designs, OR both patches are unfavorable
+  → This is REAL evidence the approach needs rethinking
+  → Recommendation: Before scaling further, investigate whether:
+      (a) AF2 is correctly validating switch constructs (compare to known lucCage)
+      (b) RFdiffusion is exploring the right conformational space
+      (c) A different epitope (Direction A, wing loop) might be more bindable
+
+Scenario C: Both moderate-to-high (e.g., P1: 5–15, P2: 15–30)
+  → Conclusion: Target is bindable; P2 is preferred but P1 is viable
+  → Recommendation: Proceed with both patches into full-scale design and
+    switch construction
+
+═══════════════════════════════════════════════════════════════════════════════
+FILES & ARTIFACTS
+═══════════════════════════════════════════════════════════════════════════════
+
+SAVED (Before Submission):
+  ✓ patch_analysis_summary.txt       (detailed hydrophobicity analysis)
+  ✓ 9W22_K272.pdb                    (edited NS1 target with K272)
+
+WILL BE GENERATED (On Remote):
+  batch_P1/
+    ├─ rfd/                          (100 RFdiffusion backbone PDBs)
+    ├─ parsed/                       (parsed JSON structures)
+    ├─ assigned/                     (chain assignments)
+    ├─ mpnn/                         (200 ProteinMPNN sequences)
+    └─ af2/                          (ColabFold validation outputs)
+  
+  batch_P2/
+    ├─ rfd/
+    ├─ parsed/
+    ├─ assigned/
+    ├─ mpnn/
+    └─ af2/
+
+═══════════════════════════════════════════════════════════════════════════════
+MONITORING & NEXT STEPS
+═══════════════════════════════════════════════════════════════════════════════
+
+CURRENT STATUS: Job submitted and running on GPU
+
+WAIT FOR: Compute notification when job completes (estimated in ~8–12 hours)
+
+ON COMPLETION:
+  1. Harvest output files from remote workdir
+  2. Parse ColabFold _scores.json files for each design
+  3. Generate distributions and filter by thresholds
+  4. Rank top 5 designs per batch
+  5. Create comparative summary (P1 vs P2 pass rates, distributions)
+  6. Assess whether to proceed with:
+     ─ Full design pipeline (if bindable)
+     ─ Switch construction + benchmarking (if strong hits)
+     ─ Rethinking approach (if both near-zero)
+
+═══════════════════════════════════════════════════════════════════════════════

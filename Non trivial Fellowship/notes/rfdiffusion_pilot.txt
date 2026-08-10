@@ -1,0 +1,9 @@
+# --- RFdiffusion binder pilot against DENV-2 NS1 β-ladder patch P1 ---
+# target structure: target_9W22_chainA.pdb  (chain A, residues 1-346)
+./scripts/run_inference.py \
+  inference.output_prefix=out/denv2_p1 \
+  inference.input_pdb=target_9W22_chainA.pdb \
+  'contigmap.contigs=[A1-346/0 60-100]' \
+  'ppi.hotspot_res=[A269,A272,A274,A294,A296]' \
+  inference.num_designs=20 \
+  denoiser.noise_scale_ca=0 denoiser.noise_scale_frame=0

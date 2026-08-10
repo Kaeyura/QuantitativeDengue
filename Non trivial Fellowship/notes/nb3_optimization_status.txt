@@ -1,0 +1,76 @@
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                   nb_3 LEAD OPTIMIZATION: STATUS                           ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+DESIGN PHASE:  Step 1 ✓  |  Step 2+3 ⏳  |  Step 4 ⏳
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 1: REPLICANT STABILITY (COMPLETED)
+═══════════════════════════════════════════════════════════════════════════════
+  Status:      ✓ PASSED (proceed cautiously — fragile)
+  Gate:        Median ipTM > 0.65  →  PASS (0.713)
+  Results:     5 replicates, ipTM range 0.515–0.778
+  Best on-target:  Seed 5 (ipTM 0.752, β-ladder epitope)
+  Discovery:   ipTM ranking INVERTED vs epitope fidelity
+               (highest ipTM seed 3 is OFF-epitope; seed 5 is target)
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 2+3: HOTSPOT-STEERED REFINEMENT (RUNNING)
+═══════════════════════════════════════════════════════════════════════════════
+  Job ID:      ca8933f9-ed69-422c-80bb-84a4dedbab29
+  Status:      SUBMITTED to ssh:junkgpu (RunPod A40)
+  
+  Pipeline:
+    • RFdiffusion:  12 backbone designs (hotspot-steered)
+    • ProteinMPNN:  4 sequences/design  →  48 total
+    • Boltz-2:      Validate top 8 (MSA-backed)
+  
+  Design Strategy:
+    Scaffold:       Seed 5 binder (ipTM 0.752)
+    Target:         NS1 full-length β-ladder epitope
+    Hotspots:       {269, 272, 274}
+      - 269:        Already engaged (3.9 Å), primary anchor
+      - 272, 274:   Nearby (7.5–7.7 Å), refinable via CDR design
+  
+  Expected Output:
+    • designs.pdb/:  48 designs in Cartesian coordinates
+    • boltz_results/:  8 scored complexes (confidence JSON + PAE)
+    • metrics.json:  ipTM, pLDDT for top 8
+  
+  Expected Duration:  1.5–2.0 GPU hours (~$0.50–1.20)
+  
+═══════════════════════════════════════════════════════════════════════════════
+GATE EVALUATION (STEP 2+3)
+═══════════════════════════════════════════════════════════════════════════════
+  Proceed to Step 4 IF:
+    ✓ Max ipTM > 0.68
+    ✓ pLDDT > 0.80
+    ✓ ≥ 2 of {269, 272, 274} engaged at < 5.0 Å
+    ✓ (Optional) Demonstrates hotspot recruitment vs. seed 5
+  
+  Stop (no Step 4) IF:
+    ✗ Max ipTM < 0.65 (interface optimization saturated)
+    ✗ No hotspot shift (binding mode locked)
+
+═══════════════════════════════════════════════════════════════════════════════
+FIXED DESIGN THRESHOLDS (NON-NEGOTIABLE)
+═══════════════════════════════════════════════════════════════════════════════
+  • pLDDT > 0.80           ← Boltz-2 structural confidence
+  • ipTM > 0.70            ← Binding interface confidence (primary gate)
+  • Interface PAE < 5.0 Å  ← Sub-Angstrom binder contact accuracy
+  • ≥3 hotspots engaged    ← Target epitope fidelity
+  • No threshold relaxation (locked by project scope)
+
+═══════════════════════════════════════════════════════════════════════════════
+NEXT ACTIONS
+═══════════════════════════════════════════════════════════════════════════════
+  1. Monitor job completion (expect ~2 hours)
+  2. Download metrics_json from RunPod
+  3. Parse and rank by ipTM
+  4. Check gates: passes all 4 criteria?
+     YES → Scale Step 4 (100–200 designs, full Boltz validation)
+     NO  → Stop here; diagnose if binding mode is locked
+  5. Save final designs as artifacts
+  
+═══════════════════════════════════════════════════════════════════════════════
