@@ -1,54 +1,144 @@
-# dengue_ns1_fellowship
+# Designing a Quantitative Dengue NS1 Test
 
-Curated, forward-carrying subset of `dengue_ns1_export/`. This folder keeps
-every file that is either a final deliverable, a data file the final report
-cites or that backs a released figure/table, or a structure/sequence/config
-needed to reproduce a reported result. It drops draft trails, per-section
-scratch notes, process logs, and raw unscored generation output (thousands
-of un-triaged backbones/designs) that fed into — but are not themselves —
-the reported results.
+*Kaeyura Puram and Rabaani Mehra — Non-Trivial Fellowship*
 
-## What's here
+## What this project is
 
-| Folder | Contents | Why kept |
+Dengue rapid tests answer one question: is NS1 antigen present. They cannot
+say how much, so they cannot tell a clinician whether a patient is improving
+or deteriorating. This project set out to design a de novo protein switch —
+two engineered binders gripping non-overlapping sites on dengue NS1, each
+carrying half of a split luciferase reporter — so that antigen concentration
+is reported as light in a single tube, with no wash steps and no plate
+reader.
+
+**Phase one — designing and characterizing the two binder arms — is
+complete and is what this project's report covers.** Phase two — assembling
+the binders into the switch and testing it — is fully specified but
+deliberately not started, on the evidence phase one produced (see below).
+
+## The central finding
+
+Before ranking any design, the project ran a control most binder-design
+campaigns skip: scoring a real, solved-structure antibody (2B7) and a
+non-cognate decoy (cAb-Lys3) through the same acceptance gate used to judge
+designed binders. The gate ran backwards — model confidence (Boltz-2 ipTM)
+was *anti-correlated* with whether a design actually contacted the intended
+epitope (Spearman ρ = −0.888, p = 9.7×10⁻⁶, n = 15). The known antibody
+failed the gate on every seed; the decoy with no reason to bind passed three
+of five. A published antibody predicted against its own cryo-EM epitope
+recovered none of its known contact residues in ten independent runs, at
+unchanged confidence.
+
+This is the project's most load-bearing result: **a predictor that cannot
+locate a published epitope cannot be trusted to adjudicate a designed one.**
+Everything downstream — binder ranking, the decision not to build the switch
+yet — follows from taking that finding seriously rather than working around
+it.
+
+## What the project delivers
+
+- **A calibrated scoring harness** for de novo binder design, benchmarked
+  against crystallographic ground truth and released openly. This is the
+  most transferable output: any campaign with a solved reference structure
+  for its target can run the same control.
+- **Two characterized binder arms** at non-overlapping NS1 sites: one at the
+  conserved β-ladder patch (residues 261–305), one at the wing / domain-I
+  face, whose 19-residue contact footprint is 84% conserved across all four
+  dengue serotypes (16 of 19 positions).
+- **Measured, not predicted, geometric compatibility** between the two arms:
+  termini distances from superposed structures, not from a confidence score,
+  showing they can occupy NS1 simultaneously in a geometry consistent with
+  split-reporter complementation.
+- **A construction-ready switch specification**, defining a space of 8–24
+  candidate constructs across arm pairing, linker length, and reporter
+  orientation.
+- **A corrections ledger**, disclosing every claim retracted during the
+  project and the measurement that retracted it (see Appendix A12 of the
+  report).
+
+## What the project does not deliver, and why
+
+Neither binder has been tested experimentally — they are characterized, not
+validated. The switch itself has not been assembled. This is a deliberate
+stopping point, not a delay: modeling the switch first would have meant
+ranking it on the same predictor just shown to place a known antibody on the
+wrong face of this target in ten runs out of ten. Building on an inverted
+metric would have produced confident, unfalsifiable designs, so the scoring
+was fixed before anything was built on top of it.
+
+## Next steps (from the report's Future Work, in order)
+
+1. Build the switch constructs from the measured geometry (text operation,
+   no new compute).
+2. Add the control set — free arms, a non-complementing same-epitope pair,
+   reporter-only background, a linker-length series.
+3. Re-run the calibration controls (2B7, decoy) on a second predictor
+   (AF2-multimer) to localize whether the failure is one tool or the metric
+   class.
+4. Wet-lab screen (partner-dependent): binding on the free arms by BLI/SPR,
+   complementation on assembled constructs by luminescence.
+5. A dedicated second-arm campaign targeting the wing/domain-I site,
+   deliberately engaging the residues that differ between dengue and Zika.
+
+Steps 1–3 need no wet-lab partner and no new compute, which is why they come
+first. The cheapest experiment that could falsify this work — a binding
+assay on the two free arms against recombinant NS1 — is the immediate ask of
+any partner.
+
+## Repository contents
+
+This folder is a flat export of the project's working files (structures,
+sequence files, scoring results, run scripts, and report drafts). Files
+fall into a few natural categories:
+
+| Category | Examples | What's in it |
 |---|---|---|
-| `results/` (64 files) | All result/metric/ranking CSVs and TSVs: gate calibration, epitope-fidelity scoring, conservation, rescue campaign, switch geometry, corrections ledger, `MANIFEST.csv` | Every number in the report traces to one of these |
-| `structures/` (46, incl. `archives/`) | Target structures (9W22, DENV4 dimer/hexamer), designed-binder and complex PDBs, ranked-design complexes, and the packaged benchmark/shortlist structure bundles (`ns1_benchmark.tar.gz`, `ns1_binder_benchmark_repo.tar.gz`, `rf2_1b_shortlist_pdbs.tar.gz`, `top10_binder_complexes.tar.gz`, `for_advisor_review.tar.gz`, `multi_validator_structures.tar.gz`, `rf2_shortlist_pdbs.tar.gz`, `ns1_final_benchmark_bundle.tar.gz`) | Structural ground truth + every structure a reported measurement was taken from |
-| `figures/` (51) | All report and campaign figures as originally rendered | Visual record backing the report; some are superseded by the regenerated versions noted below |
-| `sequences/` (12) | Target and designed-binder FASTA files | Needed to regenerate or hand off any design |
-| `configs/` (42) | Run configs, harness specs, manifests, per-design JSON metrics, `.yaml` co-folding configs | Needed to reproduce any number exactly (harness settings are load-bearing per Appendix A13) |
-| `code/` (16) | Analysis scripts (`epitope_contact_analysis.py`, `score_epitope_fidelity.py`, `denv_conservation_check.py`), the benchmark notebook, and all `.sh` run/deploy scripts | Reproduces every reported measurement from the deposited files |
-| `docs/` (14) | Final-state project docs: theory of change, target product profile, switch construction plan, deliverables inventory, README variants | Forward-facing project state, not drafting history |
-| `presentation/` (2) | Pitch deck, video deck | Fellowship deliverables |
-| (root) | `Designing a Quantitative Dengue NS1 Test - FINAL.pdf` | The submitted final report |
+| Structures | `*.pdb`, `*.cif` | Target NS1 structures (9W22, DENV4 dimer/hexamer), designed binder complexes |
+| Sequences | `*.fasta` | Target NS1, designed binder sequences, serotype references |
+| Results | `*.csv`, `*.json` | Gate calibration, epitope-contact scoring, rescue-campaign results, conservation checks, switch geometry measurements |
+| Code | `*.py`, `*.ipynb`, `*.sh` | Contact-analysis and conservation-check modules, the campaign notebook, run/deploy scripts |
+| Report & writing | `*.md`, `*.docx`, `*.pdf`, `*.pptx` | Report drafts, section drafts, the pitch deck, video-deck notes |
+| Figures | `*.png` | Report figures (gate calibration, epitope-fidelity scatter, conservation, switch geometry) |
+| Archives | `*.tar.gz`, `*.zip` | Bundled design sets and structure collections |
 
-**Total: 248 files, ~115 MB.**
+*A prior working session organized this export into role-based subfolders
+(`structures/`, `results/`, `code/`, `sequences/`, `configs/`, `plans/`,
+`notes/`, `logs/`, `archives/`) for easier navigation; that structure is not
+reflected in the current copy of this folder. Ask if you'd like it
+reapplied.*
 
-## What was deliberately left out, and why
+## Key files to start with
 
-- **Report drafting trail** (11 `.docx` versions, `report.md`, `FULL_REPORT.md`, `appendix.md`, the older PDF, ~15 section-draft `.md` files, outline/rubric/review-response files, title/name-brainstorm notes) — all superseded by the final PDF kept at the root of this folder. The final report is the single source of truth for the writeup; the trail that produced it doesn't need to travel forward.
-- **Process logs and status notes** (`execution_status_report.txt`, `nb3_optimization_status.txt`, `timings.txt`, `run.log`, etc.) — session-scoped working notes, not results.
-- **Raw unscored generation output** (`rfdiffusion_designs.tar.gz`, `mpnn_designs.tar.gz`, `mpnn1b_designs.tar.gz`, `phase1b_backbones.tar.gz`, `pilot_designs.zip`, `pilot_msa_refold.zip` — several hundred MB of un-triaged candidate backbones and sequences) — this is generation-stage intermediate output. The *scored, ranked* subset of it is preserved in `results/` (rankings) and `structures/` (the specific complexes those rankings refer to); the raw bulk is regenerable from the pipeline (RFdiffusion → ProteinMPNN → Boltz-2) and the configs in `configs/` if ever needed again, but doesn't need to be carried as a static artifact.
-- **Two unrelated files** that were mixed into the original export folder by mistake: a SHAP/judicial-models report and a separate dengue-prevalence-forecasting project write-up. Neither belongs to this project.
+- `report.md` / the final report PDF — full write-up: methods, findings,
+  binder table, switch specification, limitations, future work.
+- `final_ranked_binder_table.csv` — the 32 Boltz-2-validated designs across
+  both refinement rounds, ranked by epitope contact.
+- `gate_calibration_multiseed.csv` — the 15-prediction calibration dataset
+  behind the central finding (ρ = −0.888).
+- `switch_geometry_measurements.csv` — termini-distance measurements behind
+  the switch construction spec.
+- `final_benchmark_analysis.ipynb` — walks through re-running the scoring
+  harness on new sequences.
 
-## Where to start
+## Reproducing the report figures
 
-1. `Designing a Quantitative Dengue NS1 Test - FINAL.pdf` — the report.
-2. `results/gate_calibration_multiseed.csv` + `results/design_shortlist_table.csv` — the two datasets behind the report's central finding.
-3. `docs/theory_of_change.md` and `docs/provisional_TPP.md` — where the project goes next.
-4. `code/final_benchmark_analysis.ipynb` — reproduces the scoring harness on new sequences.
+The report's figures are regenerable from the CSV/JSON files above using
+standard plotting code (matplotlib); none require re-running the design
+pipeline. See the project's figure-regeneration script if starting from a
+prior data export, or ask for the mapping of each figure to its source file.
 
-## Data files behind each headline claim (quick reference)
+## Attribution
 
-| Claim | Data file |
-|---|---|
-| Gate calibration inversion (ρ = −0.888, n = 15) | `results/gate_calibration_multiseed.csv`, `results/gate_calibration_summary.csv` |
-| Design-level rank shift (ρ ≈ −0.79 recomputed from this file; parent report states ρ = −0.826, not yet reconciled — see paper_draft.md §3.2) | `results/design_shortlist_table.csv` |
-| 3G2 mislocation (0/16 recovery, 10/10 runs) | `results/ternary_results.csv` |
-| Steric infeasibility of cropped-target designs | `results/shortlist_refeasibility.csv` |
-| Monomer vs. dimer registered prediction | `results/dimer_revalidation.csv` |
-| Second-arm DENV1-4 conservation (84%) | `results/second_arm_conservation.csv` |
-| Switch geometry / linker requirement | `results/switch_geometry_measurements.csv` |
-| Withdrawn burial safety criterion | `results/burial_decomposition.csv`, `results/direction_b_burial.csv` |
-| Charge-variant series (withdrawn) | `results/charge_variant_results.csv` |
-| Full corrections ledger | `results/corrections_ledger.csv` |
+Kaeyura: computational pipeline, impact-chain formulation, methodology,
+results, discussion. Rabaani: literature review, proposed diagnostic test,
+theory of change, conclusion. Pivots and decisions throughout: joint.
+
+## AI usage
+
+Claude (Anthropic), the Claude Science agent platform, and Gemini (Google)
+were used for: orchestrating GPU compute runs on RunPod (restart-on-failure,
+sequential launch, shutdown), debugging analysis code, generating and
+debugging figure-plotting code, and polishing already-written prose. All
+study design, analysis, findings, conclusions, and report structure are the
+authors' own. See the report's AI Disclosure section for the full statement.
