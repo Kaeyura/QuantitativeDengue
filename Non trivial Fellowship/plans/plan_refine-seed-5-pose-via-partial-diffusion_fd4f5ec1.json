@@ -1,0 +1,99 @@
+{
+  "version": 3,
+  "created_at": "2026-07-22T16:49:43.681Z",
+  "task_summary": "Refine seed-5 pose via partial diffusion to recruit β-ladder hotspots into a validated binder",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Scaffold + target prep",
+      "delegations": [
+        {
+          "name": "Scaffold prep",
+          "steps": [
+            {
+              "title": "Chothia-renumber seed 5 and build HLT scaffold",
+              "description": "Extract seed 5's binder chain (from the reproducible pose), run ANARCI Chothia renumbering, and assemble the RFantibody HLT framework file so its coordinates can seed partial diffusion. Verify CDR annotation and that the numbered structure matches the seed-5 pose."
+            },
+            {
+              "title": "Crop NS1 target to the β-ladder domain",
+              "description": "Build a target PDB cropped to the β-ladder region (~261–305 plus minimal structural context) so the sticky N-terminus and tip decoy surfaces are physically absent from the diffusion search. Keep native NS1 numbering for hotspots. Save cropped target as an artifact."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Partial diffusion + sequence design",
+      "delegations": [
+        {
+          "name": "Design generation",
+          "steps": [
+            {
+              "title": "Partial diffusion from seed 5 toward hotspots",
+              "description": "Run RFantibody RFdiffusion in partial-diffusion mode seeded from the seed-5 HLT scaffold against the cropped β-ladder target, steering toward hotspots 269/272/274 (with 294/296 monitored). Generate a batch of backbones at a partial-noise level that perturbs CDR loops while preserving the productive pose."
+            },
+            {
+              "title": "ProteinMPNN sequence design",
+              "description": "Design sequences on the diffused backbones (ProteinMPNN, temp ~0.2, several seqs per backbone), fixing NS1 as context and designing the binder chain."
+            },
+            {
+              "title": "RF2 in-pipeline pre-filter",
+              "description": "Score all designs with RF2 (RFantibody, 10 recycles) and shortlist candidates by interaction quality for the more expensive Boltz-2 validation stage."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    },
+    {
+      "name": "Validation + ranking",
+      "delegations": [
+        {
+          "name": "Validate and rank",
+          "steps": [
+            {
+              "title": "Boltz-2 validation on shortlist",
+              "description": "Fold the shortlisted binder–NS1 complexes through the validated Boltz-2 harness (MSA-backed, recycling 3, --no_kernels), using full-length NS1 for the final scored complexes so interface context matches the validated setup."
+            },
+            {
+              "title": "Contact-first ranking against locked gate",
+              "description": "Rank designs by β-ladder contact count and hotspot engagement FIRST, then Boltz-2 ipTM/pLDDT/interface-PAE. Report against the locked gate (ipTM>0.7, pLDDT>0.8, interface-PAE<5Å at target hotspots, ≥3/5 hotspots). Do not rank on ipTM alone; flag any high-ipTM/off-epitope poses explicitly."
+            },
+            {
+              "title": "DENV1-4 pan-serotype interface check",
+              "description": "Map the predicted interface residues of top designs onto the existing DENV1–4 NS1 alignment to check conservation of the contacted β-ladder positions; note serotype coverage and any variable contacts."
+            }
+          ]
+        }
+      ],
+      "id": "phase-2"
+    },
+    {
+      "name": "Write-up",
+      "delegations": [
+        {
+          "name": "Methods + results",
+          "steps": [
+            {
+              "title": "Methods write-up and ranked deliverable",
+              "description": "Write up the seed-5 refinement campaign: scaffold prep, partial-diffusion parameters, validated harness, contact-first ranking, and results. Include honest negative-result notes if the gate isn't cleared (the seed-5-conditioned-design finding is itself a deliverable). Save the ranked binder table and write-up as artifacts."
+            }
+          ]
+        }
+      ],
+      "id": "phase-3"
+    }
+  ],
+  "desired_outputs": [
+    "Chothia-renumbered seed-5 HLT scaffold + β-ladder-cropped NS1 target",
+    "Partial-diffusion binder set (RFantibody) refined toward hotspots 269/272/274",
+    "Boltz-2-validated, contact-first ranked binder table",
+    "DENV1-4 pan-serotype interface check on top designs",
+    "Methods write-up of the seed-5 refinement campaign + negative-result notes"
+  ],
+  "feasibility": {
+    "confidence": "medium",
+    "rationale": "Seed 5's on-epitope pose is now confirmed reproducible (3/6 seeds) and ANARCI + the Boltz-2 harness are validated, so the pipeline is unblocked. The open risk is biological, not infrastructural: partial diffusion may not recruit hotspots 272/274 into contact, and no design is guaranteed to clear the locked gate — a well-characterized negative is an accepted outcome."
+  }
+}
